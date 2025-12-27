@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +9,7 @@ import { ChevronRight, Clock, Calendar } from 'lucide-react';
 import { FinalCtaSection } from '@/components/manya/final-cta-section';
 import { BlogSidebar } from '@/components/manya/blog-sidebar';
 import { RoiCalculator } from '@/components/manya/roi-calculator';
+import type { Metadata } from 'next';
 
 type BlogPostPageProps = {
   params: {
@@ -15,7 +17,7 @@ type BlogPostPageProps = {
   };
 };
 
-export async function generateMetadata({ params }: BlogPostPageProps) {
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug);
 
   if (!post) {
@@ -25,8 +27,29 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   }
 
   return {
-    title: `${post.title} | Manya Digital Blog`,
+    title: post.title,
     description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: new Date(post.date).toISOString(),
+      authors: [post.author.name],
+      images: [
+        {
+          url: post.image.src,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image.src],
+    },
   };
 }
 
@@ -36,9 +59,40 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) {
     notFound();
   }
+  
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://manyadigital.com/blog/${post.slug}`, // Reemplazar
+    },
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image.src,
+    author: {
+      '@type': 'Person',
+      name: post.author.name,
+      url: 'https://manyadigital.com', // Opcional: URL del perfil del autor
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Manya Digital',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://manyadigital.com/logo.png', // Reemplazar
+      },
+    },
+    datePublished: new Date(post.date).toISOString(),
+    dateModified: post.lastUpdated ? new Date(post.lastUpdated).toISOString() : new Date(post.date).toISOString(),
+  };
 
   return (
     <article className="bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* Header */}
       <div className="container mx-auto px-4 pt-8 md:px-6">
         <div className="flex items-center text-sm text-muted-foreground">
@@ -65,7 +119,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
             <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <time dateTime={post.date}>{post.date}</time>
+                <time dateTime={new Date(post.date).toISOString()}>{post.date}</time>
             </div>
             <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />

@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -9,16 +10,56 @@ import {
 } from '@/components/ui/card';
 import { blogPosts } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Blog | Manya Digital',
   description:
     'Las últimas tendencias, noticias y consejos de marketing digital relevantes para el mercado argentino.',
+  openGraph: {
+    type: 'website',
+    url: '/blog',
+    title: 'Blog | Manya Digital',
+    description: 'Análisis, tendencias y consejos sobre el universo del marketing digital en Argentina.',
+  },
 };
 
 export default function BlogPage() {
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Blog de Manya Digital',
+    description: 'Las últimas tendencias, noticias y consejos de marketing digital relevantes para el mercado argentino.',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Manya Digital',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://manyadigital.com/logo.png', // Reemplazar
+      },
+    },
+    blogPost: blogPosts.map((post) => ({
+      '@type': 'BlogPosting',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://manyadigital.com/blog/${post.slug}`, // Reemplazar
+      },
+      headline: post.title,
+      image: post.image.src,
+      datePublished: new Date(post.date).toISOString(),
+      author: {
+        '@type': 'Person',
+        name: post.author.name,
+      },
+    })),
+  };
+
   return (
     <div className="bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       <div className="container mx-auto px-4 py-16 md:px-6 md:py-24">
         <div className="mb-12 text-center">
           <h1 className="font-headline text-4xl font-bold md:text-5xl">

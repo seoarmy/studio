@@ -1,3 +1,4 @@
+
 import { HeroSection } from '@/components/manya/hero-section';
 import { ServicesSection } from '@/components/manya/services-section';
 import { StatsSection } from '@/components/manya/stats-section';
@@ -11,8 +12,23 @@ import { LocationsSection } from '@/components/manya/locations-section';
 import { ClientsSection } from '@/components/manya/clients-section';
 
 export default function Home() {
+  const webSiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    url: 'https://manyadigital.com', // Reemplazar con el dominio real
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://manyadigital.com/buscar?q={search_term_string}', // Reemplazar
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
       <HeroSection />
       <ServicesSection />
       <WhyUsSection />

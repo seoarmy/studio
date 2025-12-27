@@ -7,11 +7,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Servicios | Manya Digital',
+export const metadata: Metadata = {
+  title: 'Servicios de Marketing Digital | Manya Digital',
   description:
     'Conocé todas las soluciones de marketing digital, IA y SEO que tenemos para potenciar tu negocio en Argentina.',
+  openGraph: {
+    type: 'website',
+    url: '/servicios',
+    title: 'Servicios de Marketing Digital | Manya Digital',
+    description: 'Soluciones de marketing digital, IA y SEO para potenciar tu negocio.',
+  },
 };
 
 const detailedServices = [
@@ -115,8 +122,32 @@ const processSteps = [
 ]
 
 export default function ServiciosPage() {
+    const servicesSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Servicios de Manya Digital',
+      itemListElement: detailedServices.map((service, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Service',
+          name: service.title,
+          description: service.benefit,
+          url: `https://manyadigital.com/servicios#${service.id}`, // Reemplazar
+          provider: {
+            '@type': 'Organization',
+            name: 'Manya Digital',
+          },
+        },
+      })),
+    };
+
     return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       <div className="space-y-24">
         {detailedServices.map((service, index) => {
           const Icon = service.icon;
@@ -163,7 +194,7 @@ export default function ServiciosPage() {
                     </ul>
                     <div className="mt-auto pt-8">
                        <Button asChild className="group" variant="outline">
-                         <Link href={`/${service.id}`}>
+                         <Link href={`/servicios#${service.id}`}>
                            Ver más
                            <MoveRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                          </Link>
