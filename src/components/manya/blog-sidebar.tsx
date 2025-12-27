@@ -6,11 +6,14 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-import { Gift, CheckCircle2, Lock, Loader2 } from 'lucide-react';
+import { Gift, CheckCircle2, Lock, Loader2, Book, LayoutGrid, ChevronRight } from 'lucide-react';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
+import { blogPosts } from '@/lib/data';
+import Link from 'next/link';
+import { Separator } from '../ui/separator';
 
 const leadMagnetFormSchema = z.object({
   name: z.string().min(2, 'Se requiere tu nombre.'),
@@ -23,6 +26,9 @@ type LeadMagnetFormValues = z.infer<typeof leadMagnetFormSchema>;
 export function BlogSidebar() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  
+  const latestPosts = blogPosts.slice(0, 3);
+  const categories = [...new Set(blogPosts.map(post => post.category))];
 
   const form = useForm<LeadMagnetFormValues>({
     resolver: zodResolver(leadMagnetFormSchema),
@@ -35,7 +41,6 @@ export function BlogSidebar() {
 
   const onSubmit: SubmitHandler<LeadMagnetFormValues> = async (data) => {
     setIsSubmitting(true);
-    // Simular envío de formulario
     await new Promise((resolve) => setTimeout(resolve, 1500));
     setIsSubmitting(false);
 
@@ -129,7 +134,50 @@ export function BlogSidebar() {
         </CardContent>
       </Card>
       
-      {/* Aquí irían los otros componentes del sidebar */}
+      {/* Latest Posts */}
+      <Card className="bg-card">
+        <CardHeader>
+          <CardTitle className='flex items-center gap-2 font-headline text-xl'>
+            <Book className="h-5 w-5 text-primary"/>
+            Últimos Artículos
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            {latestPosts.map((post, index) => (
+              <div key={post.slug}>
+                <Link href={`/blog/${post.slug}`} className="group">
+                  <p className="font-semibold group-hover:text-primary transition-colors">{post.title}</p>
+                  <p className="text-xs text-muted-foreground">{post.date}</p>
+                </Link>
+                {index < latestPosts.length - 1 && <Separator className="mt-4" />}
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Categories */}
+      <Card className="bg-card">
+        <CardHeader>
+          <CardTitle className='flex items-center gap-2 font-headline text-xl'>
+            <LayoutGrid className="h-5 w-5 text-primary"/>
+            Categorías
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul className="space-y-2">
+            {categories.map(category => (
+              <li key={category}>
+                <Link href={`/blog?categoria=${category}`} className="flex items-center justify-between text-muted-foreground hover:text-primary transition-colors group">
+                  <span>{category}</span>
+                  <ChevronRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </CardContent>
+      </Card>
     </div>
   );
 }
