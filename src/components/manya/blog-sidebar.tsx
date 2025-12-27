@@ -16,8 +16,8 @@ import Link from 'next/link';
 import { Separator } from '../ui/separator';
 
 const leadMagnetFormSchema = z.object({
-  name: z.string().min(2, 'Se requiere tu nombre.'),
-  email: z.string().email('Email inválido.'),
+  name: z.string().min(2, { message: 'Por favor, ingresá tu nombre.' }),
+  email: z.string().email({ message: 'Por favor, ingresá un email válido.' }),
   company: z.string().optional(),
 });
 
