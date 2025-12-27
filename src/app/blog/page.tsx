@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { blogPosts } from '@/lib/data';
+import { Badge } from '@/components/ui/badge';
 
 export const metadata = {
   title: 'Blog | Manya Digital',
@@ -36,29 +37,32 @@ export default function BlogPage() {
               id={post.slug}
               className="flex flex-col overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-xl border bg-card"
             >
-              <div className="relative h-56 w-full">
-                <Image
-                  src={post.image.src}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={post.image.hint}
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="font-headline text-xl leading-tight">
-                  {post.title}
-                </CardTitle>
-                <CardDescription>{post.date}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-sm text-muted-foreground">{post.excerpt}</p>
-              </CardContent>
-              <div className="p-6 pt-0">
-                  <Link href="#" className="font-semibold text-primary hover:underline">
-                    Leer más &rarr;
-                  </Link>
-              </div>
+                <Link href={`/blog/${post.slug}`} className="block group h-full flex flex-col">
+                    <div className="relative h-56 w-full">
+                        <Image
+                        src={post.image.src}
+                        alt={post.title}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={post.image.hint}
+                        />
+                         <Badge className="absolute top-4 right-4" variant="default">{post.category}</Badge>
+                    </div>
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl leading-tight group-hover:text-primary transition-colors">
+                        {post.title}
+                        </CardTitle>
+                        <CardDescription>{post.date}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                        <p className="text-sm text-muted-foreground">{post.excerpt}</p>
+                    </CardContent>
+                    <div className="p-6 pt-0 mt-auto">
+                        <span className="font-semibold text-primary hover:underline">
+                            Leer más &rarr;
+                        </span>
+                    </div>
+                </Link>
             </Card>
           ))}
         </div>
