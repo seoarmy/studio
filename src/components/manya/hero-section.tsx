@@ -34,10 +34,10 @@ export function HeroSection() {
             />
           </motion.div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/70 to-transparent"></div>
       </div>
-      <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-white md:items-start md:text-left">
+      <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-foreground md:items-start md:text-left">
         <motion.div 
           className="max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export function HeroSection() {
           <h1 className="font-bold text-4xl leading-tight drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl">
             Llevamos tu Marca al Siguiente Nivel Digital
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-gray-200 drop-shadow-md md:text-xl">
+          <p className="mt-6 max-w-xl text-lg text-muted-foreground drop-shadow-md md:text-xl">
             Estrategias de marketing innovadoras para que tu negocio se destaque
             en el mercado argentino.
           </p>

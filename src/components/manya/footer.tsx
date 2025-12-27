@@ -3,7 +3,7 @@ import { Code, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-card text-card-foreground border-t border-border/20">
+    <footer className="bg-secondary/50 text-card-foreground border-t border-border">
       <div className="container mx-auto px-4 py-12 md:px-6">
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4">
           <div className="flex flex-col items-start">
@@ -49,7 +49,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-border/20 pt-8 text-center text-sm text-muted-foreground">
+        <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Manya Digital. Todos los derechos reservados.</p>
         </div>
       </div>

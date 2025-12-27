@@ -32,7 +32,7 @@ export function TestimonialsSection() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1 h-full">
-                  <Card className="h-full flex flex-col transition-shadow duration-300 hover:shadow-lg">
+                  <Card className="h-full flex flex-col transition-shadow duration-300 hover:shadow-lg bg-card">
                     <CardContent className="flex h-full flex-col justify-between p-6">
                       <p className="mb-4 text-muted-foreground flex-grow">
                         &ldquo;{testimonial.quote}&rdquo;

@@ -52,16 +52,16 @@ export function ServicesSection() {
                 transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
               >
                 <Card
-                  className="h-full transform transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 bg-card border border-border/50"
+                  className="h-full transform transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 bg-card border border-border"
                 >
                   <CardHeader className="p-8">
                     {Icon && (
-                      <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary">
+                      <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary">
                         <Icon className="h-8 w-8" strokeWidth={2} />
                       </div>
                     )}
                     <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
-                    <CardDescription className="pt-2 text-base">
+                    <CardDescription className="pt-2 text-base text-muted-foreground">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
