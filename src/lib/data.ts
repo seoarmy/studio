@@ -133,9 +133,8 @@ export const blogPosts = [
     },
     readTime: '8 min de lectura',
     lastUpdated: '16 de Julio, 2024',
+    intro: `<p>El marketing digital en Argentina es un ecosistema en constante evolución. Para que tu marca no se quede atrás, es crucial estar al tanto de las últimas tendencias. Acá te dejamos un resumen de las 5 más importantes para lo que queda de 2024.</p>`,
     content: `
-        <p>El marketing digital en Argentina es un ecosistema en constante evolución. Para que tu marca no se quede atrás, es crucial estar al tanto de las últimas tendencias. Acá te dejamos un resumen de las 5 más importantes para lo que queda de 2024.</p>
-        
         <h2 id="ia-generativa">1. IA Generativa para Contenidos</h2>
         <p>La inteligencia artificial generativa está revolucionando la forma en que creamos contenido. Herramientas como ChatGPT, Gemini o Midjourney permiten generar textos, imágenes y hasta videos en segundos. Esto no reemplaza la creatividad humana, pero sí la potencia, permitiendo escalar la producción de contenido y personalizarlo a un nivel nunca antes visto. Desde copys para anuncios hasta borradores de artículos de blog, la IA es tu nuevo copiloto creativo.</p>
         
@@ -203,7 +202,8 @@ export const blogPosts = [
     },
     readTime: '10 min de lectura',
     lastUpdated: null,
-    content: `<p>Contenido del artículo sobre IA en redes sociales...</p>`,
+    intro: `<p>La inteligencia artificial (IA) ha dejado de ser una promesa futurista para convertirse en una herramienta indispensable en el arsenal de cualquier estratega de redes sociales. Si sentís que estás corriendo detrás de las tendencias y te cuesta generar contenido relevante de forma consistente, la IA es tu mejor aliada para cambiar el juego.</p>`,
+    content: `<p>En este artículo, vamos a desglosar cómo la IA puede potenciar tu estrategia en redes sociales, desde la creación de contenido hasta el análisis de métricas, para que puedas trabajar de manera más inteligente, no más dura.</p>`,
     tags: ['IA', 'Redes Sociales', 'Automatización'],
   },
   {
@@ -220,7 +220,8 @@ export const blogPosts = [
     },
     readTime: '12 min de lectura',
     lastUpdated: null,
-    content: `<p>Contenido del artículo sobre SEO Local...</p>`,
+    intro: `<p>¿Tenés un negocio con una ubicación física? Entonces, más que nadie, necesitás que la gente de tu zona te encuentre. De nada sirve tener el mejor producto o servicio si tus vecinos no saben que existís. Acá es donde entra el SEO Local, tu arma secreta para dominar las búsquedas "cerca de mí".</p>`,
+    content: `<p>Olvidate de competir con gigantes a nivel nacional. Tu objetivo es ser el rey de tu barrio, y en esta guía te vamos a mostrar exactamente cómo lograrlo.</p>`,
     tags: ['SEO', 'Negocios Locales', 'Google My Business'],
   },
 ];

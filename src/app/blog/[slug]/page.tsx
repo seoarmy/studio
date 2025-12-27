@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ChevronRight, Clock, Calendar } from 'lucide-react';
 import { FinalCtaSection } from '@/components/manya/final-cta-section';
 import { BlogSidebar } from '@/components/manya/blog-sidebar';
+import { RoiCalculator } from '@/components/manya/roi-calculator';
 
 type BlogPostPageProps = {
   params: {
@@ -98,8 +99,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     prose-a:text-primary hover:prose-a:text-primary/80 prose-a:transition-colors
                     prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic
                     prose-li:marker:text-primary"
-                    dangerouslySetInnerHTML={{ __html: post.content }}
-                />
+                  >
+                    {post.intro && <div dangerouslySetInnerHTML={{ __html: post.intro }} />}
+                    
+                    {post.intro && <RoiCalculator />}
+                    
+                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                </div>
             </div>
             {/* Sidebar */}
             <aside className="lg:col-span-4 lg:sticky top-24 h-fit">
