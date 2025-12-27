@@ -13,6 +13,21 @@ import { motion } from 'framer-motion';
 import type { ServiceDetail } from '@/lib/data';
 
 export function ServicePageContent({ service }: { service: ServiceDetail }) {
+    
+  const renderHeroTitle = () => {
+    if (!service.hero.h1 || !service.title) {
+      return service.hero.h1;
+    }
+    const parts = service.hero.h1.split(service.title);
+    return (
+      <>
+        {parts[0]}
+        <span className="text-primary">{service.title}</span>
+        {parts[1]}
+      </>
+    );
+  };
+
   return (
     <div className="bg-background">
       {/* Hero */}
@@ -20,22 +35,22 @@ export function ServicePageContent({ service }: { service: ServiceDetail }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-24 text-center md:py-32"
+        className="relative overflow-hidden bg-background py-24 text-center md:py-32"
       >
         <div className="container relative z-10">
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="font-headline bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-4xl font-bold text-transparent md:text-6xl"
+            className="font-headline text-4xl font-bold md:text-6xl"
           >
-            {service.hero.h1}
+            {renderHeroTitle()}
           </motion.h1>
           <motion.p 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground"
+            className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground"
           >
             {service.meta.description}
           </motion.p>
@@ -45,21 +60,31 @@ export function ServicePageContent({ service }: { service: ServiceDetail }) {
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }} 
             className="mt-8 flex flex-wrap justify-center gap-3"
           >
-            {service.hero.subservices.map(sub => <Badge key={sub} variant="secondary" className="px-4 py-2 text-sm">{sub}</Badge>)}
+            {service.hero.subservices.map(sub => (
+              <Badge 
+                key={sub} 
+                variant="secondary" 
+                className="px-4 py-2 text-sm transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+              >
+                {sub}
+              </Badge>
+            ))}
+          </motion.div>
+           <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+            className="mt-12"
+          >
+            <Button asChild size="lg" className="group rounded-full px-8 text-lg">
+                <Link href="/contacto">
+                    {service.cta1.button}
+                    <MoveRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+            </Button>
           </motion.div>
         </div>
       </motion.section>
-
-      {/* CTA 1 */}
-      <section className="py-20 md:py-24">
-        <div className="container text-center">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">{service.cta1.h2}</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">{service.cta1.p}</p>
-            <Button asChild size="lg" className="mt-8 rounded-full">
-                <Link href="/contacto">{service.cta1.button}</Link>
-            </Button>
-        </div>
-      </section>
 
       {/* Why Section */}
       <section className="py-20 md:py-24 bg-muted/20">
@@ -91,7 +116,7 @@ export function ServicePageContent({ service }: { service: ServiceDetail }) {
       <section className="py-24 md:py-32 bg-primary text-primary-foreground">
           <div className="container text-center">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">{service.cta2.h2}</h2>
-              <Button asChild size="lg" variant="outline" className="mt-8 bg-primary-foreground text-primary font-bold rounded-full px-8 py-6 text-lg">
+              <Button asChild size="lg" variant="outline" className="mt-8 bg-primary-foreground text-primary font-bold rounded-full px-8 py-6 text-lg transition-colors hover:bg-primary-foreground/90">
                   <Link href="/contacto">{service.cta2.button}</Link>
               </Button>
           </div>
