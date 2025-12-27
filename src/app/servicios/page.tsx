@@ -54,8 +54,17 @@ export default function ServiciosPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
       />
+      <div className="text-center mb-16">
+        <h1 className="font-headline text-4xl font-bold md:text-5xl">
+        Servicios que <span className="text-primary">mañan</span> resultados
+        </h1>
+        <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
+        No solo hacemos marketing, creamos sistemas de crecimiento. Combinamos estrategia, creatividad y tecnología para llevar tu marca al siguiente nivel.
+        </p>
+      </div>
+
       <div className="space-y-16">
-        <p className="text-lg text-muted-foreground">
+        <p className="text-lg text-muted-foreground text-center">
           Explorá nuestras soluciones diseñadas para el mercado argentino. Desde posicionar tu marca en Google hasta automatizar tus ventas con inteligencia artificial, tenemos una estrategia para vos.
         </p>
         
