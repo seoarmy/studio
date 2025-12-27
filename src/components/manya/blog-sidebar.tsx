@@ -14,6 +14,8 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '@/component
 import { blogPosts } from '@/lib/data';
 import Link from 'next/link';
 import { Separator } from '../ui/separator';
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 const leadMagnetFormSchema = z.object({
   name: z.string().min(2, { message: 'Por favor, ingresá tu nombre.' }),
@@ -49,6 +51,10 @@ export function BlogSidebar() {
       description: `Gracias, ${data.name}. Te hemos enviado la guía a tu email.`,
     });
     form.reset();
+  };
+
+  const formatDate = (dateString: string) => {
+    return format(new Date(dateString), "dd 'de' MMMM, yyyy", { locale: es });
   };
 
   return (
@@ -148,7 +154,7 @@ export function BlogSidebar() {
               <div key={post.slug}>
                 <Link href={`/blog/${post.slug}`} className="group">
                   <p className="font-semibold group-hover:text-primary transition-colors">{post.title}</p>
-                  <p className="text-xs text-muted-foreground">{post.date}</p>
+                  <p className="text-xs text-muted-foreground">{formatDate(post.date)}</p>
                 </Link>
                 {index < latestPosts.length - 1 && <Separator className="mt-4" />}
               </div>

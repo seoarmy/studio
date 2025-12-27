@@ -125,7 +125,7 @@ export const blogPosts = [
     title: 'Top 5 Tendencias de Marketing Digital en Argentina para 2024',
     excerpt:
       'El mundo digital argento no para de cambiar. Te contamos las posta que tu negocio no puede dejar pasar este año.',
-    date: '15 de Julio, 2024',
+    date: '2024-07-15',
     image: getImage('blog-1'),
     category: 'Estrategia Digital',
     author: {
@@ -133,7 +133,7 @@ export const blogPosts = [
         avatar: getImage('testimonial-1'),
     },
     readTime: '8 min de lectura',
-    lastUpdated: '16 de Julio, 2024',
+    lastUpdated: '2024-07-16',
     intro: `<p>El marketing digital en Argentina es un ecosistema en constante evolución. Para que tu marca no se quede atrás, es crucial estar al tanto de las últimas tendencias. Acá te dejamos un resumen de las 5 más importantes para lo que queda de 2024.</p>`,
     content: `
         <h2 id="ia-generativa">1. IA Generativa para Contenidos</h2>
@@ -194,7 +194,7 @@ export const blogPosts = [
     title: 'El Poder de la IA para Potenciar tu Estrategia en Redes Sociales',
     excerpt:
       'La inteligencia artificial ya no es el futuro, es el ahora. Descubrí cómo usarla para optimizar tus campañas y contenidos.',
-    date: '02 de Julio, 2024',
+    date: '2024-07-02',
     image: getImage('blog-2'),
     category: 'Redes Sociales',
     author: {
@@ -212,7 +212,7 @@ export const blogPosts = [
     title: 'SEO Local: La Clave para que Negocios a la Calle la Rompan Online',
     excerpt:
       'Si tenés un local, tienda o boliche, el SEO local es tu mejor amigo para atraer clientes de tu barrio. Te explicamos cómo arrancar.',
-    date: '20 de Junio, 2024',
+    date: '2024-06-20',
     image: getImage('blog-3'),
     category: 'SEO',
     author: {

@@ -3,9 +3,15 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { blogPosts } from '@/lib/data';
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 export function BlogPreviewSection() {
   const latestPosts = blogPosts.slice(0, 3);
+
+  const formatDate = (dateString: string) => {
+    return format(new Date(dateString), "dd 'de' MMMM, yyyy", { locale: es });
+  };
 
   return (
     <section id="blog" className="py-16 md:py-24 bg-muted/30">
@@ -39,7 +45,7 @@ export function BlogPreviewSection() {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4 text-sm text-muted-foreground">
-                    {post.date}
+                    {formatDate(post.date)}
                   </p>
                   <p className="text-sm text-muted-foreground">
                     {post.excerpt}

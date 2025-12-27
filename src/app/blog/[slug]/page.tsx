@@ -10,6 +10,8 @@ import { FinalCtaSection } from '@/components/manya/final-cta-section';
 import { BlogSidebar } from '@/components/manya/blog-sidebar';
 import { RoiCalculator } from '@/components/manya/roi-calculator';
 import type { Metadata } from 'next';
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 type BlogPostPageProps = {
   params: {
@@ -87,6 +89,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     dateModified: post.lastUpdated ? new Date(post.lastUpdated).toISOString() : new Date(post.date).toISOString(),
   };
 
+  const formatDate = (dateString: string) => {
+    return format(new Date(dateString), "dd 'de' MMMM, yyyy", { locale: es });
+  };
+
   return (
     <article className="bg-background text-foreground">
       <script
@@ -119,7 +125,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
             <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <time dateTime={new Date(post.date).toISOString()}>{post.date}</time>
+                <time dateTime={new Date(post.date).toISOString()}>{formatDate(post.date)}</time>
             </div>
             <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />

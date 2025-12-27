@@ -11,6 +11,8 @@ import {
 import { blogPosts } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import type { Metadata } from 'next';
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 export const metadata: Metadata = {
   title: 'Blog | Manya Digital',
@@ -54,6 +56,11 @@ export default function BlogPage() {
     })),
   };
 
+  const formatDate = (dateString: string) => {
+    return format(new Date(dateString), "dd 'de' MMMM, yyyy", { locale: es });
+  };
+
+
   return (
     <div className="bg-background">
       <script
@@ -93,7 +100,7 @@ export default function BlogPage() {
                         <CardTitle className="font-headline text-xl leading-tight group-hover:text-primary transition-colors">
                         {post.title}
                         </CardTitle>
-                        <CardDescription>{post.date}</CardDescription>
+                        <CardDescription>{formatDate(post.date)}</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow">
                         <p className="text-sm text-muted-foreground">{post.excerpt}</p>
