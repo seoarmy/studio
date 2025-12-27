@@ -76,14 +76,14 @@ export function ServicesSection() {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-4 py-4">
               {services.map((service, index) => {
                 const Icon = iconMap[service.icon];
                 return (
                   <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                     <div className="h-full p-1">
                       <Link href={`/servicios#${service.slug}`} className="block h-full group">
-                        <Card className="h-full transform transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 bg-card border border-border/50 p-6 flex flex-col justify-between group-hover:border-primary">
+                        <Card className="h-full transform transition-all duration-300 ease-in-out group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-primary/20 bg-card border border-border/50 p-6 flex flex-col justify-between group-hover:border-primary">
                           <div>
                             {Icon && (
                               <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary transition-colors duration-300 group-hover:text-accent">
