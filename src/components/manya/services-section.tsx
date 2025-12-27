@@ -21,24 +21,24 @@ const iconMap: { [key: string]: React.ElementType } = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
 };
 
 export function ServicesSection() {
   return (
-    <section id="servicios" className="py-16 md:py-24 bg-background">
+    <section id="servicios" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-12 text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">
+        <div className="mb-16 text-center">
+          <h2 className="font-bold text-4xl md:text-5xl">
             Nuestros Servicios
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
+          <p className="mx-auto mt-6 max-w-3xl text-muted-foreground md:text-lg">
             Un abanico de soluciones para impulsar tu presencia online y alcanzar
             tus objetivos de negocio.
           </p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
             const Icon = iconMap[service.icon];
             return (
@@ -52,16 +52,16 @@ export function ServicesSection() {
                 transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
               >
                 <Card
-                  className="h-full transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                  className="h-full transform transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 bg-card border border-border/50"
                 >
-                  <CardHeader>
+                  <CardHeader className="p-8">
                     {Icon && (
-                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                        <Icon className="h-6 w-6" />
+                      <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary">
+                        <Icon className="h-8 w-8" strokeWidth={2} />
                       </div>
                     )}
-                    <CardTitle>{service.title}</CardTitle>
-                    <CardDescription className="pt-2">
+                    <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+                    <CardDescription className="pt-2 text-base">
                       {service.description}
                     </CardDescription>
                   </CardHeader>

@@ -74,53 +74,53 @@ export function ContactSection() {
   return (
     <motion.section 
       id="contacto" 
-      className="py-16 md:py-24 bg-background"
+      className="py-24 md:py-32 bg-background"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-12 text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">
+        <div className="mb-16 text-center">
+          <h2 className="font-bold text-4xl md:text-5xl">
             Contactanos
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
+          <p className="mx-auto mt-6 max-w-3xl text-muted-foreground md:text-lg">
             ¿Estás listo para empezar? Contanos tu idea y la hacemos realidad.
           </p>
         </div>
-        <div className="grid gap-12 lg:grid-cols-5">
-          <div className="lg:col-span-2 space-y-8">
-             <Card className="transition-shadow duration-300 hover:shadow-lg">
+        <div className="grid gap-16 lg:grid-cols-5">
+          <div className="lg:col-span-2 space-y-10">
+             <Card className="bg-card border-border/50 transition-shadow duration-300 hover:shadow-lg hover:shadow-primary/10">
                 <CardHeader>
-                    <CardTitle className="font-headline">Info de Contacto</CardTitle>
+                    <CardTitle className="font-bold">Info de Contacto</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4 text-muted-foreground">
+                <CardContent className="space-y-6 text-muted-foreground">
                     <div className="flex items-start gap-4">
-                        <MapPin className="h-6 w-6 text-primary mt-1"/>
+                        <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" strokeWidth={2}/>
                         <span>Av. Corrientes 1234, Piso 5<br/>C1043AAS, Buenos Aires, Argentina</span>
                     </div>
                     <div className="flex items-center gap-4">
-                        <Mail className="h-6 w-6 text-primary"/>
+                        <Mail className="h-6 w-6 text-primary flex-shrink-0" strokeWidth={2}/>
                         <a href="mailto:hola@manyadigital.com" className="transition-colors duration-300 ease-in-out hover:text-primary">hola@manyadigital.com</a>
                     </div>
                     <div className="flex items-center gap-4">
-                        <Phone className="h-6 w-6 text-primary"/>
+                        <Phone className="h-6 w-6 text-primary flex-shrink-0" strokeWidth={2}/>
                         <a href="tel:+5491112345678" className="transition-colors duration-300 ease-in-out hover:text-primary">+54 9 11 1234-5678</a>
                     </div>
                 </CardContent>
              </Card>
-             <div className="overflow-hidden rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl">
+             <div className="overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl hover:shadow-primary/20">
                 {mapImage && <Image src={mapImage.imageUrl} alt="Ubicación" width={600} height={450} className="w-full" data-ai-hint={mapImage.imageHint} />}
              </div>
           </div>
 
           <div className="lg:col-span-3">
-            <Card className="p-4 sm:p-6 md:p-8 transition-shadow duration-300 hover:shadow-lg">
+            <Card className="p-6 sm:p-8 md:p-10 bg-card border-border/50 transition-shadow duration-300 hover:shadow-lg hover:shadow-primary/10">
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-6"
+                  className="space-y-8"
                 >
                   <FormField
                     control={form.control}
@@ -191,7 +191,7 @@ export function ContactSection() {
                         <FormControl>
                           <Textarea
                             placeholder="Contanos sobre tu proyecto, tus metas, tus sueños..."
-                            className="min-h-[120px]"
+                            className="min-h-[150px]"
                             {...field}
                           />
                         </FormControl>
@@ -199,7 +199,7 @@ export function ContactSection() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full transition-all duration-300 ease-in-out hover:scale-105" disabled={isSubmitting}>
+                  <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-accent font-bold text-primary-foreground transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-primary/40 rounded-full" disabled={isSubmitting}>
                     {isSubmitting ? (
                         <>
                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />

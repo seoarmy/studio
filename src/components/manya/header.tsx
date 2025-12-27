@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, BotMessageSquare } from 'lucide-react';
+import { Menu, X, BotMessageSquare, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { navLinks } from '@/lib/data';
@@ -28,24 +28,24 @@ export function Header() {
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
         isScrolled
-          ? 'bg-background/80 shadow-md backdrop-blur-sm'
+          ? 'bg-background/80 shadow-lg shadow-primary/10 backdrop-blur-sm'
           : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" passHref>
-          <BotMessageSquare className="h-8 w-8 text-primary" />
-          <span className="font-headline text-2xl font-bold text-foreground">
+          <Code className="h-8 w-8 text-primary" strokeWidth={2}/>
+          <span className="font-bold text-2xl text-foreground">
             Manya Digital
           </span>
         </Link>
 
-        <nav className="hidden md:flex md:items-center md:gap-6">
+        <nav className="hidden md:flex md:items-center md:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               {link.name}
             </Link>
@@ -60,7 +60,7 @@ export function Header() {
                 <span className="sr-only">Abrir menú</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-card">
               <div className="flex h-full flex-col">
                 <div className="mb-8 flex items-center justify-between">
                   <Link
@@ -68,8 +68,8 @@ export function Header() {
                     className="flex items-center gap-2"
                     onClick={closeMobileMenu}
                   >
-                    <BotMessageSquare className="h-8 w-8 text-primary" />
-                    <span className="font-headline text-xl font-bold text-foreground">
+                    <Code className="h-8 w-8 text-primary" strokeWidth={2}/>
+                    <span className="font-bold text-xl text-foreground">
                       Manya Digital
                     </span>
                   </Link>

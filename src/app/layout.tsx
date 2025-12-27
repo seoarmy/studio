@@ -3,18 +3,6 @@ import './globals.css';
 import { Header } from '@/components/manya/header';
 import { Footer } from '@/components/manya/footer';
 import { Toaster } from '@/components/ui/toaster';
-import { Inter, Raleway } from 'next/font/google';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-body',
-});
-
-const raleway = Raleway({
-  subsets: ['latin'],
-  variable: '--font-headline',
-  weight: ['400', '700'],
-});
 
 export const metadata: Metadata = {
   title: 'Manya Digital | Agencia de Marketing Digital en Argentina',
@@ -28,11 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="!scroll-smooth">
+    <html lang="es" className="!scroll-smooth dark">
       <head>
       </head>
       <body
-        className={`${inter.variable} ${raleway.variable} font-body bg-background text-foreground antialiased`}
+        className='font-sans bg-background text-foreground antialiased'
       >
         <div className="flex min-h-screen flex-col">
           <Header />

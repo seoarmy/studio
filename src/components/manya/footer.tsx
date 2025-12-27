@@ -1,15 +1,15 @@
 import Link from 'next/link';
-import { BotMessageSquare, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Code, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-card text-card-foreground border-t">
-      <div className="container mx-auto px-4 py-8 md:px-6">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+    <footer className="bg-card text-card-foreground border-t border-border/20">
+      <div className="container mx-auto px-4 py-12 md:px-6">
+        <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4">
           <div className="flex flex-col items-start">
             <Link href="/" className="mb-4 flex items-center gap-2" passHref>
-              <BotMessageSquare className="h-8 w-8 text-primary" />
-              <span className="font-headline text-2xl font-bold">
+              <Code className="h-8 w-8 text-primary" strokeWidth={2}/>
+              <span className="font-bold text-2xl">
                 Manya Digital
               </span>
             </Link>
@@ -18,8 +18,8 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="mb-4 font-headline text-lg font-semibold">Navegación</h3>
-            <ul className="space-y-2">
+            <h3 className="mb-4 font-semibold text-lg">Navegación</h3>
+            <ul className="space-y-3">
               <li><Link href="#servicios" className="text-sm text-muted-foreground transition-colors duration-300 ease-in-out hover:text-primary">Servicios</Link></li>
               <li><Link href="#casos-de-exito" className="text-sm text-muted-foreground transition-colors duration-300 ease-in-out hover:text-primary">Casos de Éxito</Link></li>
               <li><Link href="/blog" className="text-sm text-muted-foreground transition-colors duration-300 ease-in-out hover:text-primary">Blog</Link></li>
@@ -27,29 +27,29 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 font-headline text-lg font-semibold">Contacto</h3>
-            <address className="not-italic space-y-2 text-sm text-muted-foreground">
+            <h3 className="mb-4 font-semibold text-lg">Contacto</h3>
+            <address className="not-italic space-y-3 text-sm text-muted-foreground">
               <p>Buenos Aires, Argentina</p>
               <p><a href="mailto:hola@manyadigital.com" className="transition-colors duration-300 ease-in-out hover:text-primary">hola@manyadigital.com</a></p>
               <p><a href="tel:+5491112345678" className="transition-colors duration-300 ease-in-out hover:text-primary">+54 9 11 1234-5678</a></p>
             </address>
           </div>
           <div>
-            <h3 className="mb-4 font-headline text-lg font-semibold">Seguinos</h3>
+            <h3 className="mb-4 font-semibold text-lg">Seguinos</h3>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground transition-colors duration-300 ease-in-out hover:text-primary" aria-label="Facebook">
-                <Facebook className="h-6 w-6" />
+                <Facebook className="h-6 w-6" strokeWidth={2}/>
               </Link>
               <Link href="#" className="text-muted-foreground transition-colors duration-300 ease-in-out hover:text-primary" aria-label="Instagram">
-                <Instagram className="h-6 w-6" />
+                <Instagram className="h-6 w-6" strokeWidth={2}/>
               </Link>
               <Link href="#" className="text-muted-foreground transition-colors duration-300 ease-in-out hover:text-primary" aria-label="LinkedIn">
-                <Linkedin className="h-6 w-6" />
+                <Linkedin className="h-6 w-6" strokeWidth={2}/>
               </Link>
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
+        <div className="mt-12 border-t border-border/20 pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Manya Digital. Todos los derechos reservados.</p>
         </div>
       </div>
