@@ -7,7 +7,7 @@ import { ArrowRight, Bot, Linkedin, Search } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function HeroSection() {
-    const aiImage = PlaceHolderImages.find((p) => p.id === 'jellyfish');
+    const jellyfishImage = PlaceHolderImages.find((p) => p.id === 'jellyfish');
 
   return (
     <section className="relative w-full overflow-hidden bg-background text-foreground">
@@ -47,14 +47,14 @@ export function HeroSection() {
 
         {/* Columna Derecha: Imagen y Stats */}
         <div className="relative h-full w-full hidden lg:flex items-center justify-center">
-           {aiImage && (
+           {jellyfishImage && (
              <Image
-                src={aiImage.imageUrl}
+                src={jellyfishImage.imageUrl}
                 alt="Marketing digital con inteligencia artificial"
                 width={500}
                 height={500}
                 className="object-contain object-center"
-                data-ai-hint={aiImage.imageHint}
+                data-ai-hint={jellyfishImage.imageHint}
                 priority
              />
            )}
