@@ -45,6 +45,14 @@ export default function RootLayout({
       areaServed: 'AR',
       availableLanguage: ['es'],
     },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Ambrosio Olmos 782',
+      addressLocality: 'Córdoba',
+      addressRegion: 'CBA',
+      postalCode: 'X5000',
+      addressCountry: 'AR',
+    },
     sameAs: [
       'https://www.facebook.com/manyadigital',
       'https://www.instagram.com/manyadigital',

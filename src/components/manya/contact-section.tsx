@@ -98,7 +98,7 @@ export function ContactSection() {
                 <CardContent className="space-y-6 text-muted-foreground">
                     <div className="flex items-start gap-4">
                         <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" strokeWidth={2}/>
-                        <span>Av. Corrientes 1234, Piso 5<br/>C1043AAS, Buenos Aires, Argentina</span>
+                        <span>Ambrosio Olmos 782<br/>X5000, Córdoba, Argentina</span>
                     </div>
                     <div className="flex items-center gap-4">
                         <Mail className="h-6 w-6 text-primary flex-shrink-0" strokeWidth={2}/>

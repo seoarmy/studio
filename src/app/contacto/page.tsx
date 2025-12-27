@@ -24,9 +24,10 @@ export default function ContactoPage() {
         telephone: '+54-9-11-1234-5678',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Av. Corrientes 1234, Piso 5',
-          addressLocality: 'Buenos Aires',
-          postalCode: 'C1043AAS',
+          streetAddress: 'Ambrosio Olmos 782',
+          addressLocality: 'Córdoba',
+          addressRegion: 'CBA',
+          postalCode: 'X5000',
           addressCountry: 'AR',
         },
       },
