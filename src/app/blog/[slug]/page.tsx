@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ChevronRight, Clock, Calendar, User } from 'lucide-react';
 import { FinalCtaSection } from '@/components/manya/final-cta-section';
+import { BlogSidebar } from '@/components/manya/blog-sidebar';
 
 type BlogPostPageProps = {
   params: {
@@ -102,16 +103,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
             {/* Sidebar */}
             <aside className="lg:col-span-4 lg:sticky top-24 h-fit">
-                {/* Tabla de Contenidos - Placeholder */}
-                <div className="p-6 border rounded-2xl bg-card">
-                    <h3 className="font-headline text-xl font-bold mb-4">En este artículo:</h3>
-                    {/* Aquí iría la tabla de contenidos dinámica */}
-                    <ul className="space-y-2">
-                        <li><a href="#ia-generativa" className="text-muted-foreground hover:text-primary">1. IA Generativa</a></li>
-                        <li><a href="#video-corto" className="text-muted-foreground hover:text-primary">2. Video Corto</a></li>
-                        <li><a href="#seo-conversacional" className="text-muted-foreground hover:text-primary">3. SEO Conversacional</a></li>
-                    </ul>
-                </div>
+                <BlogSidebar />
             </aside>
         </div>
       </div>
