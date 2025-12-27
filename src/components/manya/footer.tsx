@@ -50,7 +50,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Manya Digital. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Manya Digital. Todos los derechos reservados. | <Link href="/sitemap.xml" className="hover:text-primary">Mapa del sitio</Link></p>
         </div>
       </div>
     </footer>
