@@ -2,7 +2,7 @@
 
 import { Building, GraduationCap, HeartPulse, Hotel, Laptop, LineChart, Milestone, ShoppingCart } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 
 const industries = [
   { name: 'E-commerce', icon: ShoppingCart },
