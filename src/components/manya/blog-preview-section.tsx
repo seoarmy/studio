@@ -51,7 +51,7 @@ export function BlogPreviewSection() {
         </div>
         <div className="mt-12 text-center">
           <Button asChild variant="outline">
-            <Link href="/blog">Visitar Nuestro Blog</Link>
+            <Link href="/blog">Ir al Blog</Link>
           </Button>
         </div>
       </div>

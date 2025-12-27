@@ -7,7 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'Manya Digital | Agencia de Marketing Digital en Argentina',
   description:
-    'Potenciamos tu marca con estrategias de marketing digital a medida. Expertos en SEO, SEM, Redes Sociales y más en el mercado argentino.',
+    'Potenciamos tu marca con estrategias de marketing digital a medida. Somos expertos en SEO, SEM, Redes Sociales y más, enfocados en el mercado argentino.',
 };
 
 export default function RootLayout({

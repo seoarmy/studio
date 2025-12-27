@@ -37,8 +37,8 @@ import Image from 'next/image';
 import { Loader2, Mail, MapPin, Phone } from 'lucide-react';
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, 'El nombre es requerido'),
-  email: z.string().email('Email inválido'),
+  name: z.string().min(2, 'Tu nombre es requerido'),
+  email: z.string().email('El email no es válido'),
   serviceOfInterest: z.string().optional(),
   question: z.string().min(10, 'Tu mensaje debe tener al menos 10 caracteres'),
 });
@@ -67,7 +67,7 @@ export function ContactSection() {
 
     toast({
       title: '¡Mensaje Enviado!',
-      description: `Gracias por tu interés, ${data.name}. Nos pondremos en contacto a la brevedad.`,
+      description: `Gracias por tu interés, ${data.name}. Nos vamos a poner en contacto con vos a la brevedad.`,
     });
     form.reset();
   };
@@ -80,14 +80,14 @@ export function ContactSection() {
             Contactanos
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
-            ¿Listo para empezar? Contanos tu idea y la haremos realidad.
+            ¿Estás listo para empezar? Contanos tu idea y la hacemos realidad.
           </p>
         </div>
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2 space-y-8">
              <Card>
                 <CardHeader>
-                    <CardTitle className="font-headline">Información de Contacto</CardTitle>
+                    <CardTitle className="font-headline">Info de Contacto</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                     <div className="flex items-start gap-4">
