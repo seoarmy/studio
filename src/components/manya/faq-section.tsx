@@ -73,17 +73,17 @@ export function FaqSection() {
           </p>
         </div>
         <div className="mx-auto max-w-3xl">
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-2">
             {faqData.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="rounded-lg border bg-card px-6 transition-shadow duration-300 hover:shadow-md"
+                className="rounded-lg border bg-card px-4 transition-shadow duration-300 hover:shadow-md"
               >
-                <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline text-base py-4">
                   <h4>{faq.question}</h4>
                 </AccordionTrigger>
-                <AccordionContent className="pt-2 text-muted-foreground">
+                <AccordionContent className="pt-0 pb-4 text-muted-foreground">
                   <p>{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>
