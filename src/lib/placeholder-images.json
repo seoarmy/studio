@@ -1,10 +1,10 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-background",
-      "description": "Fondo para la sección de héroe",
-      "imageUrl": "https://images.unsplash.com/photo-1713947506934-c0b6519e069d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b2ZmaWNlJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NjY3NzQxNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "office collaboration"
+      "id": "jellyfish",
+      "description": "Imagen de una medusa violeta brillante sobre fondo oscuro para la sección de héroe.",
+      "imageUrl": "https://images.unsplash.com/photo-1577963098295-8e426631e4a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqZWxseWZpc2glMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NjY4NjA0Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jellyfish dark background"
     },
     {
       "id": "success-1",

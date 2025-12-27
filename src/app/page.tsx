@@ -3,14 +3,20 @@ import { ServicesSection } from '@/components/manya/services-section';
 import { StatsSection } from '@/components/manya/stats-section';
 import { WhyUsSection } from '@/components/manya/why-us-section';
 import { FinalCtaSection } from '@/components/manya/final-cta-section';
+import { BlogPreviewSection } from '@/components/manya/blog-preview-section';
+import { TestimonialsSection } from '@/components/manya/testimonials-section';
+import { SuccessCasesSection } from '@/components/manya/success-cases-section';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <ServicesSection />
-      <StatsSection />
       <WhyUsSection />
+      <SuccessCasesSection />
+      <TestimonialsSection />
+      <StatsSection />
+      <BlogPreviewSection />
       <FinalCtaSection />
     </>
   );
