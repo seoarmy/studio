@@ -65,6 +65,12 @@
       "description": "Mapa de ubicación",
       "imageUrl": "https://images.unsplash.com/photo-1612294037637-ec328d0e075e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidWVub3MlMjBhaXJlc3xlbnwwfHx8fDE3NjY4NjA0Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "buenos aires"
+    },
+    {
+      "id": "why-us-chart",
+      "description": "Imagen para la sección de Por qué elegirnos",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjY5MjI1MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business dashboard"
     }
   ]
 }
