@@ -39,7 +39,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2" passHref>
           <Code className="h-8 w-8 text-primary" strokeWidth={2}/>
           <span className="font-headline font-bold text-2xl text-foreground">
-            Manya Digital
+            MANYA Digital
           </span>
         </Link>
 
@@ -77,7 +77,7 @@ export function Header() {
                         >
                             <Code className="h-8 w-8 text-primary" strokeWidth={2}/>
                             <span className="font-headline font-bold text-xl text-foreground">
-                            Manya Digital
+                            MANYA Digital
                             </span>
                         </Link>
                      </SheetTitle>

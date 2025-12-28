@@ -98,14 +98,14 @@ export const successCases = [
 export const testimonials = [
   {
     quote:
-      'Manya Digital transformó nuestra presencia online. El equipo es súper profesional, creativo y siempre están un paso adelante. ¡Los resultados hablan solos!',
+      'MANYA Digital transformó nuestra presencia online. El equipo es súper profesional, creativo y siempre están un paso adelante. ¡Los resultados hablan solos!',
     name: 'Javier Morales',
     title: 'CEO de TechBaires',
     avatar: getImage('testimonial-2'),
   },
   {
     quote:
-      'Desde que laburamos con Manya, nuestro e-commerce no para de crecer. Entienden perfecto el mercado argentino y cómo llegarle a la gente.',
+      'Desde que laburamos con MANYA, nuestro e-commerce no para de crecer. Entienden perfecto el mercado argentino y cómo llegarle a la gente.',
     name: 'Sofía Rossi',
     title: 'Fundadora de Moda Urbana',
     avatar: getImage('testimonial-3'),
@@ -129,7 +129,7 @@ export const blogPosts = [
     image: getImage('blog-1'),
     category: 'Estrategia Digital',
     author: {
-        name: 'Equipo Manya Digital',
+        name: 'Equipo MANYA Digital',
         avatar: getImage('testimonial-1'),
     },
     readTime: '8 min de lectura',
@@ -198,7 +198,7 @@ export const blogPosts = [
     image: getImage('blog-2'),
     category: 'Redes Sociales',
     author: {
-        name: 'Equipo Manya Digital',
+        name: 'Equipo MANYA Digital',
         avatar: getImage('testimonial-2'),
     },
     readTime: '10 min de lectura',
@@ -216,7 +216,7 @@ export const blogPosts = [
     image: getImage('blog-3'),
     category: 'SEO',
     author: {
-        name: 'Equipo Manya Digital',
+        name: 'Equipo MANYA Digital',
         avatar: getImage('testimonial-3'),
     },
     readTime: '12 min de lectura',
@@ -234,7 +234,7 @@ export const serviceDetails = [
     slug: 'seo',
     title: 'SEO',
     meta: {
-      title: 'Agencia SEO en Argentina | Manya Digital',
+      title: 'Agencia SEO en Argentina | MANYA Digital',
       description: 'Potenciá tu visibilidad online con nuestra agencia de SEO. Estrategias de posicionamiento web y SEO local para dominar los rankings en Argentina.',
     },
     hero: {
@@ -312,7 +312,7 @@ export const serviceDetails = [
     slug: 'diseno-web',
     title: 'Diseño Web',
     meta: {
-      title: 'Agencia de Diseño Web en Argentina | Manya Digital',
+      title: 'Agencia de Diseño Web en Argentina | MANYA Digital',
       description: 'Creamos páginas web que venden. Nuestra agencia de diseño web en Argentina se especializa en sitios optimizados para la conversión y la experiencia de usuario (UX).',
     },
     hero: {
@@ -390,7 +390,7 @@ export const serviceDetails = [
     slug: 'gestion-rrss',
     title: 'Gestión de RRSS',
     meta: {
-      title: 'Agencia de Redes Sociales en Argentina | Manya Digital',
+      title: 'Agencia de Redes Sociales en Argentina | MANYA Digital',
       description: 'Servicios de Community Manager y gestión de redes sociales. Creamos contenido, gestionamos comunidades y potenciamos tu marca en Instagram, Facebook, TikTok y más.',
     },
 hero: {
@@ -468,7 +468,7 @@ hero: {
     slug: 'performance-marketing',
     title: 'Performance Marketing',
     meta: {
-      title: 'Agencia de Performance Marketing en Argentina | Manya Digital',
+      title: 'Agencia de Performance Marketing en Argentina | MANYA Digital',
       description: 'Maximizá tu inversión con nuestra agencia de Performance Marketing. Expertos en campañas de Meta Ads (Facebook, Instagram) y Google Ads con foco en el ROI.',
     },
     hero: {
@@ -546,7 +546,7 @@ hero: {
     slug: 'crm',
     title: 'CRM',
     meta: {
-      title: 'Implementación de CRM en Argentina | Manya Digital',
+      title: 'Implementación de CRM en Argentina | MANYA Digital',
       description: 'Expertos en implementación y automatización de CRM (HubSpot, Salesforce). Organizá tus ventas, marketing y atención al cliente para escalar tu negocio.',
     },
     hero: {
@@ -624,7 +624,7 @@ howWeHelp: {
     slug: 'automatizaciones',
     title: 'Automatizaciones',
     meta: {
-      title: 'Automatizaciones con IA en Argentina | Manya Digital',
+      title: 'Automatizaciones con IA en Argentina | MANYA Digital',
       description: 'Optimizá procesos y escalá tu negocio con nuestros servicios de automatización con IA. Expertos en Zapier, Make y desarrollo de workflows inteligentes.',
     },
     hero: {

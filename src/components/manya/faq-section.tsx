@@ -38,7 +38,7 @@ const faqData = [
       '¡Sí! Creemos que toda empresa merece crecer. Diseñamos estrategias a medida que se adaptan a diferentes niveles de inversión, siempre buscando maximizar el retorno de cada peso invertido, sin importar el tamaño del presupuesto.',
   },
   {
-    question: '¿En qué se diferencia Manya Digital de otras agencias?',
+    question: '¿En qué se diferencia MANYA Digital de otras agencias?',
     answer:
       'Nos obsesionan los resultados y la tecnología. No solo ejecutamos, sino que construimos sistemas de crecimiento integrando estrategia, creatividad y un uso intensivo de datos e inteligencia artificial para tomar mejores decisiones.',
   },

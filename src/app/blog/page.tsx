@@ -15,13 +15,13 @@ import { format, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
 
 export const metadata: Metadata = {
-  title: 'Blog | Manya Digital',
+  title: 'Blog | MANYA Digital',
   description:
     'Las últimas tendencias, noticias y consejos de marketing digital relevantes para el mercado argentino.',
   openGraph: {
     type: 'website',
     url: '/blog',
-    title: 'Blog | Manya Digital',
+    title: 'Blog | MANYA Digital',
     description: 'Análisis, tendencias y consejos sobre el universo del marketing digital en Argentina.',
   },
 };
@@ -30,11 +30,11 @@ export default function BlogPage() {
   const blogSchema = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    name: 'Blog de Manya Digital',
+    name: 'Blog de MANYA Digital',
     description: 'Las últimas tendencias, noticias y consejos de marketing digital relevantes para el mercado argentino.',
     publisher: {
       '@type': 'Organization',
-      name: 'Manya Digital',
+      name: 'MANYA Digital',
       logo: {
         '@type': 'ImageObject',
         url: 'https://manyadigital.ar/logo.png',
@@ -58,7 +58,10 @@ export default function BlogPage() {
 
   const formatDate = (dateString: string) => {
     const date = parseISO(dateString);
-    return format(date, "dd 'de' MMMM, yyyy", { locale: es });
+    const timeZone = 'America/Argentina/Buenos_Aires';
+    const zonedDate = new Date(date.toLocaleString('en-US', { timeZone }));
+    const utcDate = new Date(zonedDate.getUTCFullYear(), zonedDate.getUTCMonth(), zonedDate.getUTCDate());
+    return format(utcDate, "dd 'de' MMMM, yyyy", { locale: es });
   };
 
 

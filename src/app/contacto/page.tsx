@@ -3,12 +3,12 @@ import { ContactSection } from "@/components/manya/contact-section";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Contacto | Agencia de Marketing Digital Manya",
+    title: "Contacto | Agencia de Marketing Digital MANYA",
     description: "Ponete en contacto con nuestro equipo para empezar a potenciar tu marca. Estamos en Buenos Aires, Argentina.",
     openGraph: {
       type: 'website',
       url: '/contacto',
-      title: 'Contacto | Manya Digital',
+      title: 'Contacto | MANYA Digital',
       description: 'Ponete en contacto con nuestro equipo para empezar a potenciar tu marca.',
     },
 };
@@ -19,7 +19,7 @@ export default function ContactoPage() {
       '@type': 'ContactPage',
       mainEntity: {
         '@type': 'Organization',
-        name: 'Manya Digital',
+        name: 'MANYA Digital',
         url: 'https://manyadigital.ar',
         telephone: '+541158578004',
         address: {

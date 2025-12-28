@@ -10,7 +10,7 @@ export function Footer() {
             <Link href="/" className="mb-4 flex items-center gap-2" passHref>
               <Code className="h-8 w-8 text-primary" strokeWidth={2}/>
               <span className="font-headline font-bold text-2xl">
-                Manya Digital
+                MANYA Digital
               </span>
             </Link>
             <p className="text-sm text-muted-foreground">
@@ -50,7 +50,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Manya Digital. Todos los derechos reservados. | <Link href="/sitemap.xml" className="hover:text-primary">Mapa del sitio</Link></p>
+          <p>&copy; {new Date().getFullYear()} MANYA Digital. Todos los derechos reservados. | <Link href="/sitemap.xml" className="hover:text-primary">Mapa del sitio</Link></p>
         </div>
       </div>
     </footer>

@@ -55,7 +55,10 @@ export function BlogSidebar() {
 
   const formatDate = (dateString: string) => {
     const date = parseISO(dateString);
-    return format(date, "dd 'de' MMMM, yyyy", { locale: es });
+    const timeZone = 'America/Argentina/Buenos_Aires';
+    const zonedDate = new Date(date.toLocaleString('en-US', { timeZone }));
+    const utcDate = new Date(zonedDate.getUTCFullYear(), zonedDate.getUTCMonth(), zonedDate.getUTCDate());
+    return format(utcDate, "dd 'de' MMMM, yyyy", { locale: es });
   };
 
   return (

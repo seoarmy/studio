@@ -9,19 +9,19 @@ import { Code } from 'lucide-react';
 export const metadata: Metadata = {
   metadataBase: new URL('https://manyadigital.ar'),
   title: {
-    default: 'Agencia de Marketing Digital en Argentina | Manya Digital',
-    template: '%s | Manya Digital',
+    default: 'Agencia de Marketing Digital en Argentina | MANYA Digital',
+    template: '%s | MANYA Digital',
   },
   description:
-    'Manya Digital es tu agencia de marketing en Argentina. Potenciamos tu marca con estrategias de SEO, IA y marketing online a medida para que alcances tus objetivos.',
+    'MANYA Digital es tu agencia de marketing en Argentina. Potenciamos tu marca con estrategias de SEO, IA y marketing online a medida para que alcances tus objetivos.',
   keywords: ['agencia de marketing', 'agencia de marketing digital', 'agencia de marketing digital en argentina', 'marketing online', 'seo', 'ia', 'automatizaciones'],
-  creator: 'Manya Digital',
-  publisher: 'Manya Digital',
+  creator: 'MANYA Digital',
+  publisher: 'MANYA Digital',
   openGraph: {
-    title: 'Agencia de Marketing Digital en Argentina | Manya Digital',
+    title: 'Agencia de Marketing Digital en Argentina | MANYA Digital',
     description: 'Potenciamos tu marca con estrategias de SEO, IA y marketing online a medida.',
     url: 'https://manyadigital.ar',
-    siteName: 'Manya Digital',
+    siteName: 'MANYA Digital',
     locale: 'es_AR',
     type: 'website',
   },
@@ -35,7 +35,7 @@ export default function RootLayout({
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Manya Digital',
+    name: 'MANYA Digital',
     url: 'https://manyadigital.ar',
     logo: 'https://manyadigital.ar/logo.png',
     contactPoint: {

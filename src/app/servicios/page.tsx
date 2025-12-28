@@ -9,13 +9,13 @@ import { MoveRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Servicios de Marketing Digital | Manya Digital',
+  title: 'Servicios de Marketing Digital | MANYA Digital',
   description:
     'Conocé todas las soluciones de marketing digital, IA y SEO que tenemos para potenciar tu negocio en Argentina.',
   openGraph: {
     type: 'website',
     url: '/servicios',
-    title: 'Servicios de Marketing Digital | Manya Digital',
+    title: 'Servicios de Marketing Digital | MANYA Digital',
     description: 'Soluciones de marketing digital, IA y SEO para potenciar tu negocio.',
   },
 };
@@ -31,7 +31,7 @@ export default function ServiciosPage() {
     const servicesSchema = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Servicios de Manya Digital',
+      name: 'Servicios de MANYA Digital',
       itemListElement: services.map((service, index) => ({
         '@type': 'ListItem',
         position: index + 1,
@@ -42,7 +42,7 @@ export default function ServiciosPage() {
           url: `https://manyadigital.ar/servicios/${service.slug}`,
           provider: {
             '@type': 'Organization',
-            name: 'Manya Digital',
+            name: 'MANYA Digital',
           },
         },
       })),
