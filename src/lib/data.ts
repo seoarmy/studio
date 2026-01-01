@@ -117,6 +117,34 @@ export const testimonials = [
     title: 'Director de FinanzasCorp',
     avatar: getImage('testimonial-1'),
   },
+  {
+    quote:
+      'Necesitábamos resultados rápidos y MANYA los entregó. Las campañas de Google Ads que manejaron nos trajeron clientes de calidad desde el primer mes.',
+    name: 'Carolina Méndez',
+    title: 'Gerente de Marketing en Inmobiliaria del Sur',
+    avatar: getImage('testimonial-2'),
+  },
+  {
+    quote:
+      'Lo que más valoro es la transparencia. Siempre sé dónde va cada peso invertido y qué resultados estamos obteniendo. Así se trabaja.',
+    name: 'Diego Fernández',
+    title: 'Dueño de Café & Co',
+    avatar: getImage('testimonial-3'),
+  },
+  {
+    quote:
+      'Implementaron un CRM que cambió completamente nuestra forma de trabajar. Ahora tenemos todo organizado y no perdemos ningún lead. Increíble.',
+    name: 'Luciana Torres',
+    title: 'Directora Comercial de EduTech',
+    avatar: getImage('testimonial-1'),
+  },
+  {
+    quote:
+      'El equipo de MANYA no solo ejecuta, sino que propone ideas constantemente. Nos ayudaron a automatizar procesos que nos ahorraron horas de trabajo.',
+    name: 'Roberto Paz',
+    title: 'Fundador de LogiExpress',
+    avatar: getImage('testimonial-2'),
+  },
 ];
 
 export const blogPosts = [
@@ -129,8 +157,8 @@ export const blogPosts = [
     image: getImage('blog-1'),
     category: 'Estrategia Digital',
     author: {
-        name: 'Equipo MANYA Digital',
-        avatar: getImage('testimonial-1'),
+      name: 'Equipo MANYA Digital',
+      avatar: getImage('testimonial-1'),
     },
     readTime: '8 min de lectura',
     lastUpdated: '2024-07-16',
@@ -198,8 +226,8 @@ export const blogPosts = [
     image: getImage('blog-2'),
     category: 'Redes Sociales',
     author: {
-        name: 'Equipo MANYA Digital',
-        avatar: getImage('testimonial-2'),
+      name: 'Equipo MANYA Digital',
+      avatar: getImage('testimonial-2'),
     },
     readTime: '10 min de lectura',
     lastUpdated: null,
@@ -216,8 +244,8 @@ export const blogPosts = [
     image: getImage('blog-3'),
     category: 'SEO',
     author: {
-        name: 'Equipo MANYA Digital',
-        avatar: getImage('testimonial-3'),
+      name: 'Equipo MANYA Digital',
+      avatar: getImage('testimonial-3'),
     },
     readTime: '12 min de lectura',
     lastUpdated: null,
@@ -296,16 +324,16 @@ export const serviceDetails = [
       button: 'Empezar a dominar mi ciudad',
     },
     faqs: [
-        { question: '¿Cuánto tardan en verse los resultados del SEO?', answer: 'El SEO es una estrategia a mediano-largo plazo. Generalmente, se empiezan a ver resultados significativos entre los 3 y 6 meses, dependiendo de la competencia de tu sector y el estado actual de tu web.'},
-        { question: '¿Es mejor hacer SEO o pagar anuncios (SEM)?', answer: 'Son estrategias complementarias. El SEM te da resultados inmediatos, mientras que el SEO construye un activo a largo plazo que te genera tráfico gratuito y sostenible. Lo ideal es combinar ambas.'},
-        { question: '¿Qué es el "link building"?', answer: 'Es el proceso de conseguir que otras páginas web de calidad enlacen a la tuya. Estos enlaces (backlinks) actúan como "votos de confianza" para Google, aumentando la autoridad y el ranking de tu sitio.'},
-        { question: 'Mi web es nueva, ¿puedo hacer SEO?', answer: '¡Claro que sí! Empezar con una base de SEO sólida desde el principio es la mejor manera de asegurar el éxito futuro de tu web. Es el momento ideal para construir la arquitectura y el contenido correctamente.'},
-        { question: '¿Manejan SEO para ecommerce?', answer: 'Sí, es una de nuestras especialidades. Optimizamos categorías, productos, y aplicamos técnicas de SEO avanzadas para que tus productos aparezcan en las búsquedas de compra.'},
-        { question: '¿Qué diferencia hay entre SEO on-page y off-page?', answer: 'El SEO on-page incluye todas las optimizaciones que se hacen dentro de tu web (contenido, estructura, meta tags). El SEO off-page se refiere a acciones fuera de tu web para mejorar su autoridad, principalmente el link building.'},
-        { question: '¿Cómo miden el éxito de una campaña de SEO?', answer: 'Definimos KPIs claros: rankings de palabras clave, aumento de tráfico orgánico, tasa de conversión de ese tráfico, y finalmente, el impacto en ventas y ROI.'},
-        { question: '¿Garantizan la primera posición en Google?', answer: 'Ninguna agencia seria puede garantizar la primera posición, ya que el algoritmo de Google cambia constantemente y depende de muchos factores. Lo que sí garantizamos es una estrategia profesional, transparente y enfocada en mejorar tus resultados de forma sostenida.'},
-        { question: '¿Necesito cambiar mi web para hacer SEO?', answer: 'No siempre. Realizamos una auditoría inicial para detectarlo. A veces solo se necesitan ajustes técnicos y de contenido. Si la plataforma es muy antigua o limitada, podríamos recomendar una actualización.'},
-        { question: '¿Hacen SEO local para varias sucursales?', answer: 'Sí. Desarrollamos estrategias para negocios con múltiples ubicaciones, gestionando las fichas de Google Business Profile y creando páginas de aterrizaje locales para cada sucursal.'},
+      { question: '¿Cuánto tardan en verse los resultados del SEO?', answer: 'El SEO es una estrategia a mediano-largo plazo. Generalmente, se empiezan a ver resultados significativos entre los 3 y 6 meses, dependiendo de la competencia de tu sector y el estado actual de tu web.' },
+      { question: '¿Es mejor hacer SEO o pagar anuncios (SEM)?', answer: 'Son estrategias complementarias. El SEM te da resultados inmediatos, mientras que el SEO construye un activo a largo plazo que te genera tráfico gratuito y sostenible. Lo ideal es combinar ambas.' },
+      { question: '¿Qué es el "link building"?', answer: 'Es el proceso de conseguir que otras páginas web de calidad enlacen a la tuya. Estos enlaces (backlinks) actúan como "votos de confianza" para Google, aumentando la autoridad y el ranking de tu sitio.' },
+      { question: 'Mi web es nueva, ¿puedo hacer SEO?', answer: '¡Claro que sí! Empezar con una base de SEO sólida desde el principio es la mejor manera de asegurar el éxito futuro de tu web. Es el momento ideal para construir la arquitectura y el contenido correctamente.' },
+      { question: '¿Manejan SEO para ecommerce?', answer: 'Sí, es una de nuestras especialidades. Optimizamos categorías, productos, y aplicamos técnicas de SEO avanzadas para que tus productos aparezcan en las búsquedas de compra.' },
+      { question: '¿Qué diferencia hay entre SEO on-page y off-page?', answer: 'El SEO on-page incluye todas las optimizaciones que se hacen dentro de tu web (contenido, estructura, meta tags). El SEO off-page se refiere a acciones fuera de tu web para mejorar su autoridad, principalmente el link building.' },
+      { question: '¿Cómo miden el éxito de una campaña de SEO?', answer: 'Definimos KPIs claros: rankings de palabras clave, aumento de tráfico orgánico, tasa de conversión de ese tráfico, y finalmente, el impacto en ventas y ROI.' },
+      { question: '¿Garantizan la primera posición en Google?', answer: 'Ninguna agencia seria puede garantizar la primera posición, ya que el algoritmo de Google cambia constantemente y depende de muchos factores. Lo que sí garantizamos es una estrategia profesional, transparente y enfocada en mejorar tus resultados de forma sostenida.' },
+      { question: '¿Necesito cambiar mi web para hacer SEO?', answer: 'No siempre. Realizamos una auditoría inicial para detectarlo. A veces solo se necesitan ajustes técnicos y de contenido. Si la plataforma es muy antigua o limitada, podríamos recomendar una actualización.' },
+      { question: '¿Hacen SEO local para varias sucursales?', answer: 'Sí. Desarrollamos estrategias para negocios con múltiples ubicaciones, gestionando las fichas de Google Business Profile y creando páginas de aterrizaje locales para cada sucursal.' },
     ]
   },
   {
@@ -374,16 +402,16 @@ export const serviceDetails = [
       button: 'Empezar mi proyecto web',
     },
     faqs: [
-        { question: '¿Cuánto tiempo lleva diseñar y desarrollar una página web?', answer: 'Depende de la complejidad. Una landing page puede tomar 2-3 semanas, mientras que un sitio corporativo o ecommerce puede llevar de 6 a 12 semanas. Siempre establecemos un cronograma claro desde el inicio.' },
-        { question: '¿Qué es UX y UI?', answer: 'UX (User Experience) se enfoca en cómo se siente el usuario al interactuar con tu web, que sea fácil y lógico. UI (User Interface) se refiere a la parte visual, los colores, botones y la estética general. Ambas son cruciales.' },
-        { question: '¿Mi web se verá bien en celulares?', answer: 'Absolutamente. Todos nuestros diseños son "Mobile First", lo que significa que diseñamos primero para celulares y luego adaptamos a pantallas más grandes. Es fundamental, ya que la mayoría del tráfico hoy es móvil.' },
-        { question: '¿Puedo actualizar el contenido de mi web yo mismo?', answer: 'Sí. Construimos nuestras webs sobre gestores de contenido (CMS) como WordPress o desarrollos a medida que te permiten editar textos, imágenes y otros contenidos de forma sencilla, sin necesidad de saber programar.' },
-        { question: '¿Ofrecen servicio de mantenimiento web?', answer: 'Sí, ofrecemos planes de mantenimiento para asegurar que tu web esté siempre actualizada, segura y funcionando a la perfección. Esto incluye actualizaciones de software, backups y monitoreo de seguridad.' },
-        { question: 'Ya tengo una web, ¿pueden rediseñarla?', answer: '¡Claro! Realizamos una auditoría de tu sitio actual para identificar puntos de mejora en diseño, UX y tecnología, y te proponemos un plan de rediseño enfocado en mejorar los resultados.' },
-        { question: '¿Incluyen el hosting y el dominio?', answer: 'Asesoramos en la elección del mejor hosting para tu proyecto y podemos gestionar la compra del dominio, pero generalmente estos servicios se contratan a nombre del cliente para que mantenga la propiedad total.' },
-        { question: '¿Qué es una "landing page"?', answer: 'Es una página única, diseñada específicamente para una campaña de marketing, con un solo objetivo: que el usuario realice una acción concreta (comprar, registrarse, etc.). Son clave para maximizar el retorno de la inversión publicitaria.' },
-        { question: '¿Hacen tiendas online (ecommerce)?', answer: 'Sí, es una de nuestras especialidades. Creamos tiendas online robustas, seguras y optimizadas para vender, integradas con pasarelas de pago y sistemas de envío locales.' },
-        { question: '¿Optimizan la velocidad de carga de la web?', answer: 'Es una de nuestras obsesiones. Una web lenta pierde ventas y posicionamiento. Optimizamos imágenes, código y servidor para que tu sitio vuele.' },
+      { question: '¿Cuánto tiempo lleva diseñar y desarrollar una página web?', answer: 'Depende de la complejidad. Una landing page puede tomar 2-3 semanas, mientras que un sitio corporativo o ecommerce puede llevar de 6 a 12 semanas. Siempre establecemos un cronograma claro desde el inicio.' },
+      { question: '¿Qué es UX y UI?', answer: 'UX (User Experience) se enfoca en cómo se siente el usuario al interactuar con tu web, que sea fácil y lógico. UI (User Interface) se refiere a la parte visual, los colores, botones y la estética general. Ambas son cruciales.' },
+      { question: '¿Mi web se verá bien en celulares?', answer: 'Absolutamente. Todos nuestros diseños son "Mobile First", lo que significa que diseñamos primero para celulares y luego adaptamos a pantallas más grandes. Es fundamental, ya que la mayoría del tráfico hoy es móvil.' },
+      { question: '¿Puedo actualizar el contenido de mi web yo mismo?', answer: 'Sí. Construimos nuestras webs sobre gestores de contenido (CMS) como WordPress o desarrollos a medida que te permiten editar textos, imágenes y otros contenidos de forma sencilla, sin necesidad de saber programar.' },
+      { question: '¿Ofrecen servicio de mantenimiento web?', answer: 'Sí, ofrecemos planes de mantenimiento para asegurar que tu web esté siempre actualizada, segura y funcionando a la perfección. Esto incluye actualizaciones de software, backups y monitoreo de seguridad.' },
+      { question: 'Ya tengo una web, ¿pueden rediseñarla?', answer: '¡Claro! Realizamos una auditoría de tu sitio actual para identificar puntos de mejora en diseño, UX y tecnología, y te proponemos un plan de rediseño enfocado en mejorar los resultados.' },
+      { question: '¿Incluyen el hosting y el dominio?', answer: 'Asesoramos en la elección del mejor hosting para tu proyecto y podemos gestionar la compra del dominio, pero generalmente estos servicios se contratan a nombre del cliente para que mantenga la propiedad total.' },
+      { question: '¿Qué es una "landing page"?', answer: 'Es una página única, diseñada específicamente para una campaña de marketing, con un solo objetivo: que el usuario realice una acción concreta (comprar, registrarse, etc.). Son clave para maximizar el retorno de la inversión publicitaria.' },
+      { question: '¿Hacen tiendas online (ecommerce)?', answer: 'Sí, es una de nuestras especialidades. Creamos tiendas online robustas, seguras y optimizadas para vender, integradas con pasarelas de pago y sistemas de envío locales.' },
+      { question: '¿Optimizan la velocidad de carga de la web?', answer: 'Es una de nuestras obsesiones. Una web lenta pierde ventas y posicionamiento. Optimizamos imágenes, código y servidor para que tu sitio vuele.' },
     ]
   },
   {
@@ -393,7 +421,7 @@ export const serviceDetails = [
       title: 'Agencia de Redes Sociales en Argentina | MANYA Digital',
       description: 'Servicios de Community Manager y gestión de redes sociales. Creamos contenido, gestionamos comunidades y potenciamos tu marca en Instagram, Facebook, TikTok y más.',
     },
-hero: {
+    hero: {
       h1: 'Somos tu agencia de Redes Sociales en Argentina',
       subservices: ['Community Management', 'Estrategia de Contenido', 'Gestión de Pauta', 'Marketing de Influencers', 'Reportes de Métricas'],
     },
@@ -452,16 +480,16 @@ hero: {
       button: 'Empezar a vender en redes',
     },
     faqs: [
-        { question: '¿En qué redes sociales debería estar mi marca?', answer: 'Depende de tu público objetivo. Hacemos un análisis inicial para determinar qué plataformas son las más relevantes para tu negocio, ya sea Instagram, Facebook, TikTok, LinkedIn, etc.' },
-        { question: '¿Con qué frecuencia publican?', answer: 'La consistencia es clave. Creamos un calendario de contenidos mensual con una frecuencia de publicación adaptada a cada red social y a los objetivos de tu marca.' },
-        { question: '¿Ustedes crean el contenido (fotos, videos)?', answer: 'Nos adaptamos a tus necesidades. Podemos trabajar con el material que nos proporciones o coordinar sesiones de fotos y video para generar contenido original y profesional.' },
-        { question: '¿Qué es el "community management"?', answer: 'Es el trabajo de interactuar con tu comunidad: responder comentarios y mensajes, generar conversaciones, moderar y, en resumen, ser la voz de tu marca en las redes. Es fundamental para construir relaciones.' },
-        { question: '¿Manejan campañas de publicidad en redes sociales?', answer: 'Sí, es parte de nuestro servicio de Performance Marketing. Podemos gestionar la pauta publicitaria para potenciar el alcance de tus publicaciones y generar conversiones.' },
-        { question: '¿Cómo sé si la estrategia está funcionando?', answer: 'Te enviamos reportes mensuales con las métricas más importantes (alcance, interacción, crecimiento de seguidores, clics al sitio web, etc.) y analizamos juntos los resultados para optimizar la estrategia.' },
-        { question: '¿Trabajan con influencers?', answer: 'Sí. Podemos desarrollar estrategias de marketing de influencers, identificando los perfiles que mejor se alinean con tu marca y tu público en Argentina para generar campañas auténticas y efectivas.' },
-        { question: '¿Qué pasa si tengo una crisis de reputación online?', answer: 'Contamos con protocolos para el manejo de crisis. Actuamos rápido para moderar la situación, responder de forma adecuada y proteger la reputación de tu marca.' },
-        { question: '¿Cuánto cuesta el servicio de gestión de redes sociales?', answer: 'El precio varía según la cantidad de redes a gestionar, la frecuencia de publicación y el nivel de producción de contenido requerido. Ofrecemos planes a medida. ¡Contactanos y te armamos un presupuesto!' },
-        { question: '¿Por qué no puedo simplemente postear yo mismo?', answer: '¡Podés! Pero gestionar redes de forma profesional requiere tiempo, estrategia, creatividad y análisis. Delegarlo en una agencia te permite enfocarte en tu negocio mientras nosotros nos encargamos de que tus redes generen resultados.' },
+      { question: '¿En qué redes sociales debería estar mi marca?', answer: 'Depende de tu público objetivo. Hacemos un análisis inicial para determinar qué plataformas son las más relevantes para tu negocio, ya sea Instagram, Facebook, TikTok, LinkedIn, etc.' },
+      { question: '¿Con qué frecuencia publican?', answer: 'La consistencia es clave. Creamos un calendario de contenidos mensual con una frecuencia de publicación adaptada a cada red social y a los objetivos de tu marca.' },
+      { question: '¿Ustedes crean el contenido (fotos, videos)?', answer: 'Nos adaptamos a tus necesidades. Podemos trabajar con el material que nos proporciones o coordinar sesiones de fotos y video para generar contenido original y profesional.' },
+      { question: '¿Qué es el "community management"?', answer: 'Es el trabajo de interactuar con tu comunidad: responder comentarios y mensajes, generar conversaciones, moderar y, en resumen, ser la voz de tu marca en las redes. Es fundamental para construir relaciones.' },
+      { question: '¿Manejan campañas de publicidad en redes sociales?', answer: 'Sí, es parte de nuestro servicio de Performance Marketing. Podemos gestionar la pauta publicitaria para potenciar el alcance de tus publicaciones y generar conversiones.' },
+      { question: '¿Cómo sé si la estrategia está funcionando?', answer: 'Te enviamos reportes mensuales con las métricas más importantes (alcance, interacción, crecimiento de seguidores, clics al sitio web, etc.) y analizamos juntos los resultados para optimizar la estrategia.' },
+      { question: '¿Trabajan con influencers?', answer: 'Sí. Podemos desarrollar estrategias de marketing de influencers, identificando los perfiles que mejor se alinean con tu marca y tu público en Argentina para generar campañas auténticas y efectivas.' },
+      { question: '¿Qué pasa si tengo una crisis de reputación online?', answer: 'Contamos con protocolos para el manejo de crisis. Actuamos rápido para moderar la situación, responder de forma adecuada y proteger la reputación de tu marca.' },
+      { question: '¿Cuánto cuesta el servicio de gestión de redes sociales?', answer: 'El precio varía según la cantidad de redes a gestionar, la frecuencia de publicación y el nivel de producción de contenido requerido. Ofrecemos planes a medida. ¡Contactanos y te armamos un presupuesto!' },
+      { question: '¿Por qué no puedo simplemente postear yo mismo?', answer: '¡Podés! Pero gestionar redes de forma profesional requiere tiempo, estrategia, creatividad y análisis. Delegarlo en una agencia te permite enfocarte en tu negocio mientras nosotros nos encargamos de que tus redes generen resultados.' },
     ]
   },
   {
@@ -530,16 +558,16 @@ hero: {
       button: 'Empezar a invertir con inteligencia',
     },
     faqs: [
-        { question: '¿Qué es Performance Marketing?', answer: 'Es un tipo de marketing digital donde solo pagás por resultados concretos, como clics, leads o ventas. El foco está 100% en el retorno de la inversión (ROI).' },
-        { question: '¿Cuál es la diferencia entre Google Ads y Meta Ads?', answer: 'Google Ads se enfoca en la "intención" (gente que busca activamente algo). Meta Ads (Facebook/Instagram) se basa en "intereses" (gente a la que le podría interesar tu producto). Usamos ambas para una estrategia completa.' },
-        { question: '¿Cuánto debería invertir en publicidad?', answer: 'No hay un número mágico. Depende de tu industria, objetivos y capacidad. Podemos empezar con un presupuesto piloto para medir resultados iniciales y luego escalar. Lo importante es que sea una inversión rentable.' },
-        { question: '¿Qué es el ROAS?', answer: 'ROAS significa "Return On Ad Spend" (Retorno de la Inversión Publicitaria). Es una métrica clave que nos dice cuántos pesos generás en ventas por cada peso que invertís en publicidad. Si tu ROAS es de 5x, significa que ganás $5 por cada $1 invertido.' },
-        { question: '¿Qué es el remarketing o retargeting?', answer: 'Es la técnica de volver a mostrarle anuncios a personas que ya visitaron tu web pero no compraron. Es muy efectivo porque te dirigís a un público que ya te conoce y mostró interés.' },
-        { question: '¿Hacen los anuncios (creatividades)?', answer: 'Sí. Nuestro equipo de diseño y copywriting se encarga de crear los anuncios (imágenes, videos, textos) optimizados para cada plataforma y segmento de audiencia.' },
-        { question: '¿En cuánto tiempo se ven los resultados?', answer: 'A diferencia del SEO, los resultados de Performance Marketing son casi inmediatos. Una vez lanzada la campaña, podés empezar a recibir tráfico y conversiones en cuestión de horas o días. La optimización para mejorar el ROI es un proceso continuo.' },
-        { question: '¿Manejan campañas para Ecommerce?', answer: 'Sí, es una de nuestras especialidades. Creamos y gestionamos campañas de Google Shopping, catálogos en Instagram y estrategias avanzadas para tiendas online.' },
-        { question: 'Ya tengo campañas activas, ¿pueden optimizarlas?', answer: '¡Por supuesto! Ofrecemos un servicio de auditoría de campañas donde analizamos tu setup actual y te proponemos un plan de acción para mejorar el rendimiento y bajar los costos por conversión.' },
-        { question: '¿Cómo es el reporte de resultados?', answer: 'Recibirás reportes periódicos (semanales o mensuales) con las métricas más importantes de forma clara y visual, junto con nuestro análisis y los próximos pasos a seguir. Transparencia total.' },
+      { question: '¿Qué es Performance Marketing?', answer: 'Es un tipo de marketing digital donde solo pagás por resultados concretos, como clics, leads o ventas. El foco está 100% en el retorno de la inversión (ROI).' },
+      { question: '¿Cuál es la diferencia entre Google Ads y Meta Ads?', answer: 'Google Ads se enfoca en la "intención" (gente que busca activamente algo). Meta Ads (Facebook/Instagram) se basa en "intereses" (gente a la que le podría interesar tu producto). Usamos ambas para una estrategia completa.' },
+      { question: '¿Cuánto debería invertir en publicidad?', answer: 'No hay un número mágico. Depende de tu industria, objetivos y capacidad. Podemos empezar con un presupuesto piloto para medir resultados iniciales y luego escalar. Lo importante es que sea una inversión rentable.' },
+      { question: '¿Qué es el ROAS?', answer: 'ROAS significa "Return On Ad Spend" (Retorno de la Inversión Publicitaria). Es una métrica clave que nos dice cuántos pesos generás en ventas por cada peso que invertís en publicidad. Si tu ROAS es de 5x, significa que ganás $5 por cada $1 invertido.' },
+      { question: '¿Qué es el remarketing o retargeting?', answer: 'Es la técnica de volver a mostrarle anuncios a personas que ya visitaron tu web pero no compraron. Es muy efectivo porque te dirigís a un público que ya te conoce y mostró interés.' },
+      { question: '¿Hacen los anuncios (creatividades)?', answer: 'Sí. Nuestro equipo de diseño y copywriting se encarga de crear los anuncios (imágenes, videos, textos) optimizados para cada plataforma y segmento de audiencia.' },
+      { question: '¿En cuánto tiempo se ven los resultados?', answer: 'A diferencia del SEO, los resultados de Performance Marketing son casi inmediatos. Una vez lanzada la campaña, podés empezar a recibir tráfico y conversiones en cuestión de horas o días. La optimización para mejorar el ROI es un proceso continuo.' },
+      { question: '¿Manejan campañas para Ecommerce?', answer: 'Sí, es una de nuestras especialidades. Creamos y gestionamos campañas de Google Shopping, catálogos en Instagram y estrategias avanzadas para tiendas online.' },
+      { question: 'Ya tengo campañas activas, ¿pueden optimizarlas?', answer: '¡Por supuesto! Ofrecemos un servicio de auditoría de campañas donde analizamos tu setup actual y te proponemos un plan de acción para mejorar el rendimiento y bajar los costos por conversión.' },
+      { question: '¿Cómo es el reporte de resultados?', answer: 'Recibirás reportes periódicos (semanales o mensuales) con las métricas más importantes de forma clara y visual, junto con nuestro análisis y los próximos pasos a seguir. Transparencia total.' },
     ]
   },
   {
@@ -571,7 +599,7 @@ hero: {
       h2: 'Primera Consultoría de CRM Gratis',
       button: 'Agendar mi consultoría',
     },
-howWeHelp: {
+    howWeHelp: {
       h3: 'Cómo te ayudamos a implementar y exprimir tu CRM',
       p: 'No solo instalamos un software. Entendemos tu proceso comercial y adaptamos la herramienta a tu negocio, no al revés. Capacitamos a tu equipo y creamos las automatizaciones que te harán la vida más fácil.',
       points: [
@@ -608,16 +636,16 @@ howWeHelp: {
       button: 'Quiero escalar mi operación',
     },
     faqs: [
-        { question: '¿Qué es un CRM?', answer: 'CRM son las siglas de "Customer Relationship Management" (Gestión de la Relación con el Cliente). Es un software que te permite centralizar en un solo lugar toda la información e interacciones con tus prospectos y clientes.' },
-        { question: '¿Mi empresa es muy chica para un CRM?', answer: '¡Al contrario! Empezar con un CRM desde el principio te permite sentar las bases para crecer de forma ordenada. Hay opciones de CRM, como el gratuito de HubSpot, que son ideales para pymes y startups.' },
-        { question: '¿Con qué CRMs trabajan?', answer: 'Somos expertos en HubSpot, uno de los CRMs líderes del mercado, y también tenemos experiencia con otras plataformas como Salesforce. Te ayudamos a elegir el más adecuado para vos.' },
-        { question: 'Ya tengo un CRM, pero no lo usamos bien. ¿Pueden ayudar?', answer: 'Sí. Ofrecemos servizi de consultoría y auditoría de CRM para optimizar tu configuración actual, limpiar tus datos, crear nuevas automatizaciones y volver a capacitar a tu equipo para que le saquen el jugo.' },
-        { question: '¿Qué es la "automatización de marketing"?', answer: 'Es el uso del CRM para ejecutar acciones de marketing de forma automática. Por ejemplo, enviar una secuencia de emails a un nuevo lead, notificar a un vendedor cuando un prospecto visita la página de precios, etc.' },
-        { question: '¿Qué es el "lead scoring"?', answer: 'Es un sistema que califica automáticamente a tus prospectos (leads) basándose en su perfil y su comportamiento (ej. abrió un email, visitó una página, etc.). Esto permite que tu equipo de ventas se enfoque en los leads más "calientes" y con más chances de comprar.' },
-        { question: '¿Cuánto tiempo lleva implementar un CRM?', answer: 'Una implementación básica puede tomar de 2 a 4 semanas. Proyectos más complejos con migraciones de datos y automatizaciones avanzadas pueden llevar más tiempo. Armamos un plan de trabajo detallado para cada caso.' },
-        { question: '¿La implementación incluye capacitación?', answer: 'Sí, siempre. La adopción por parte del equipo es clave para el éxito de un CRM. Realizamos sesiones de capacitación prácticas y dejamos material de consulta para que todos sepan cómo usar la herramienta.' },
-        { question: '¿Se puede integrar el CRM con mi página web?', answer: 'Absolutamente. Integramos el CRM con los formularios de tu web para que todos los nuevos contactos entren automáticamente al sistema. También se puede integrar con tu tienda online, sistema de chat, etc.' },
-        { question: '¿Cuál es el costo de un CRM?', answer: 'Varía mucho. Hay CRMs con versiones gratuitas muy potentes, y otros con licencias que cuestan miles de dólares. El costo depende de la cantidad de usuarios y las funcionalidades que necesites. Nuestro trabajo es encontrar la mejor opción para tu presupuesto y objetivos.' },
+      { question: '¿Qué es un CRM?', answer: 'CRM son las siglas de "Customer Relationship Management" (Gestión de la Relación con el Cliente). Es un software que te permite centralizar en un solo lugar toda la información e interacciones con tus prospectos y clientes.' },
+      { question: '¿Mi empresa es muy chica para un CRM?', answer: '¡Al contrario! Empezar con un CRM desde el principio te permite sentar las bases para crecer de forma ordenada. Hay opciones de CRM, como el gratuito de HubSpot, que son ideales para pymes y startups.' },
+      { question: '¿Con qué CRMs trabajan?', answer: 'Somos expertos en HubSpot, uno de los CRMs líderes del mercado, y también tenemos experiencia con otras plataformas como Salesforce. Te ayudamos a elegir el más adecuado para vos.' },
+      { question: 'Ya tengo un CRM, pero no lo usamos bien. ¿Pueden ayudar?', answer: 'Sí. Ofrecemos servizi de consultoría y auditoría de CRM para optimizar tu configuración actual, limpiar tus datos, crear nuevas automatizaciones y volver a capacitar a tu equipo para que le saquen el jugo.' },
+      { question: '¿Qué es la "automatización de marketing"?', answer: 'Es el uso del CRM para ejecutar acciones de marketing de forma automática. Por ejemplo, enviar una secuencia de emails a un nuevo lead, notificar a un vendedor cuando un prospecto visita la página de precios, etc.' },
+      { question: '¿Qué es el "lead scoring"?', answer: 'Es un sistema que califica automáticamente a tus prospectos (leads) basándose en su perfil y su comportamiento (ej. abrió un email, visitó una página, etc.). Esto permite que tu equipo de ventas se enfoque en los leads más "calientes" y con más chances de comprar.' },
+      { question: '¿Cuánto tiempo lleva implementar un CRM?', answer: 'Una implementación básica puede tomar de 2 a 4 semanas. Proyectos más complejos con migraciones de datos y automatizaciones avanzadas pueden llevar más tiempo. Armamos un plan de trabajo detallado para cada caso.' },
+      { question: '¿La implementación incluye capacitación?', answer: 'Sí, siempre. La adopción por parte del equipo es clave para el éxito de un CRM. Realizamos sesiones de capacitación prácticas y dejamos material de consulta para que todos sepan cómo usar la herramienta.' },
+      { question: '¿Se puede integrar el CRM con mi página web?', answer: 'Absolutamente. Integramos el CRM con los formularios de tu web para que todos los nuevos contactos entren automáticamente al sistema. También se puede integrar con tu tienda online, sistema de chat, etc.' },
+      { question: '¿Cuál es el costo de un CRM?', answer: 'Varía mucho. Hay CRMs con versiones gratuitas muy potentes, y otros con licencias que cuestan miles de dólares. El costo depende de la cantidad de usuarios y las funcionalidades que necesites. Nuestro trabajo es encontrar la mejor opción para tu presupuesto y objetivos.' },
     ]
   },
   {
@@ -686,16 +714,392 @@ howWeHelp: {
       button: 'Poner mi negocio en automático',
     },
     faqs: [
-        { question: '¿Qué tipo de tareas se pueden automatizar?', answer: 'Casi cualquier tarea digital y repetitiva. Desde pasar datos de un formulario a un CRM, enviar emails de seguimiento, generar reportes, hasta calificar leads con un chatbot. Las posibilidades son enormes.' },
-        { question: '¿Necesito saber de programación?', answer: 'No. Utilizamos herramientas "no-code" como Zapier y Make que nos permiten construir automatizaciones complejas sin necesidad de escribir código, lo que hace el proceso más rápido y económico.' },
-        { question: '¿Qué es Zapier o Make?', answer: 'Son plataformas de integración (iPaaS) que actúan como traductores entre miles de aplicaciones web (Gmail, Slack, HubSpot, etc.). Te permiten crear "recetas" del tipo: "cuando pase esto en la App A, hacé esto otro en la App B".' },
-        { question: '¿Es muy caro implementar automatizaciones?', answer: 'No necesariamente. El costo de las herramientas como Zapier o Make depende del volumen de tareas que ejecuten. El retorno de la inversión suele ser muy alto, considerando las horas de trabajo manual que se ahorran.' },
-        { question: '¿Un chatbot puede reemplazar a un vendedor?', answer: 'No lo reemplaza, lo potencia. Un chatbot con IA puede atender consultas 24/7, responder preguntas frecuentes y calificar a los leads, para que tus vendedores solo hablen con los prospectos más interesados y listos para comprar.' },
-        { question: '¿Cómo empezamos?', answer: 'El primer paso es una sesión de diagnóstico. Analizamos tus procesos actuales, identificamos las tareas más repetitivas y que más tiempo consumen, y te presentamos un plan de automatización con el ROI estimado.' },
-        { question: '¿Se puede automatizar el proceso de ventas?', answer: 'Sí. Podemos automatizar gran parte del embudo de ventas: la captura de leads, el envío de secuencias de nutrición, el agendamiento de reuniones y el seguimiento post-venta.' },
-        { question: 'Tengo muchas apps diferentes, ¿se pueden conectar?', answer: 'Muy probablemente. Plataformas como Zapier tienen miles de integraciones nativas. Y para las que no, existen métodos como webhooks o APIs para conectarlas.' },
-        { question: '¿Qué seguridad tienen estos procesos?', answer: 'Trabajamos con plataformas líderes del mercado que cumplen con altos estándares de seguridad. Nos aseguramos de manejar los datos de forma responsable y segura en cada paso del proceso.' },
-        { question: '¿Una vez implementado, requiere mantenimiento?', answer: 'Recomendamos un monitoreo periódico para asegurar que las automatizaciones sigan funcionando correctamente, especialmente si alguna de las aplicaciones conectadas se actualiza. Ofrecemos planes de mantenimiento para tu tranquilidad.' },
+      { question: '¿Qué tipo de tareas se pueden automatizar?', answer: 'Casi cualquier tarea digital y repetitiva. Desde pasar datos de un formulario a un CRM, enviar emails de seguimiento, generar reportes, hasta calificar leads con un chatbot. Las posibilidades son enormes.' },
+      { question: '¿Necesito saber de programación?', answer: 'No. Utilizamos herramientas "no-code" como Zapier y Make que nos permiten construir automatizaciones complejas sin necesidad de escribir código, lo que hace el proceso más rápido y económico.' },
+      { question: '¿Qué es Zapier o Make?', answer: 'Son plataformas de integración (iPaaS) que actúan como traductores entre miles de aplicaciones web (Gmail, Slack, HubSpot, etc.). Te permiten crear "recetas" del tipo: "cuando pase esto en la App A, hacé esto otro en la App B".' },
+      { question: '¿Es muy caro implementar automatizaciones?', answer: 'No necesariamente. El costo de las herramientas como Zapier o Make depende del volumen de tareas que ejecuten. El retorno de la inversión suele ser muy alto, considerando las horas de trabajo manual que se ahorran.' },
+      { question: '¿Un chatbot puede reemplazar a un vendedor?', answer: 'No lo reemplaza, lo potencia. Un chatbot con IA puede atender consultas 24/7, responder preguntas frecuentes y calificar a los leads, para que tus vendedores solo hablen con los prospectos más interesados y listos para comprar.' },
+      { question: '¿Cómo empezamos?', answer: 'El primer paso es una sesión de diagnóstico. Analizamos tus procesos actuales, identificamos las tareas más repetitivas y que más tiempo consumen, y te presentamos un plan de automatización con el ROI estimado.' },
+      { question: '¿Se puede automatizar el proceso de ventas?', answer: 'Sí. Podemos automatizar gran parte del embudo de ventas: la captura de leads, el envío de secuencias de nutrición, el agendamiento de reuniones y el seguimiento post-venta.' },
+      { question: 'Tengo muchas apps diferentes, ¿se pueden conectar?', answer: 'Muy probablemente. Plataformas como Zapier tienen miles de integraciones nativas. Y para las que no, existen métodos como webhooks o APIs para conectarlas.' },
+      { question: '¿Qué seguridad tienen estos procesos?', answer: 'Trabajamos con plataformas líderes del mercado que cumplen con altos estándares de seguridad. Nos aseguramos de manejar los datos de forma responsable y segura en cada paso del proceso.' },
+      { question: '¿Una vez implementado, requiere mantenimiento?', answer: 'Recomendamos un monitoreo periódico para asegurar que las automatizaciones sigan funcionando correctamente, especialmente si alguna de las aplicaciones conectadas se actualiza. Ofrecemos planes de mantenimiento para tu tranquilidad.' },
+    ]
+  },
+];
+
+export const locations = [
+  { name: 'Córdoba', slug: 'cordoba' },
+  { name: 'Buenos Aires', slug: 'buenos-aires' },
+  { name: 'Neuquén', slug: 'neuquen' },
+  { name: 'Rosario', slug: 'rosario' },
+  { name: 'Mendoza', slug: 'mendoza' },
+];
+
+export const locationDetails = [
+  {
+    slug: 'cordoba',
+    title: 'Córdoba',
+    meta: {
+      title: 'Agencia de Marketing Digital en Córdoba | MANYA Digital',
+      description: 'Potenciá tu negocio en La Docta con nuestra agencia de marketing digital en Córdoba. SEO, Redes Sociales y Diseño Web para destacar en el mercado cordobés.',
+    },
+    hero: {
+      h1: 'Tu Agencia de Marketing Digital en Córdoba',
+      subservices: ['SEO Local en Córdoba', 'Gestión de Redes Sociales', 'Diseño Web', 'Publicidad Online', 'Consultoría Estratégica'],
+    },
+    cta1: {
+      h2: '¿Querés crecer en Córdoba?',
+      p: 'Córdoba es un mercado vibrante y competitivo. Si tu negocio no destaca digitalmente, estás perdiendo oportunidades frente a la competencia en La Docta. Te ayudamos a pisar fuerte.',
+      button: 'Quiero destacar en Córdoba',
+    },
+    why: {
+      h3: '¿Por qué invertir en marketing digital en Córdoba?',
+      points: [
+        { title: 'Mercado en Expansión', description: 'Córdoba es un hub tecnológico e industrial clave. La competencia digital crece día a día.' },
+        { title: 'Alcance Local y Nacional', description: 'Desde Nueva Córdoba hasta el Cerro, llegá a tu público ideal y expandite al resto del país.' },
+        { title: 'Turismo y Servicios', description: 'Si estás en turismo o servicios, el posicionamiento digital es vital para captar la demanda constante.' },
+        { title: 'Innovación Cordobesa', description: 'El público cordobés valora la innovación. Una presencia digital moderna es tu carta de presentación.' },
+      ],
+    },
+    cta2: {
+      h2: 'Consultoría de Marketing en Córdoba Gratis',
+      button: 'Agendar mi reunión',
+    },
+    howWeHelp: {
+      h3: 'Estrategias pensadas para el mercado cordobés',
+      p: 'Conocemos la idiosincrasia de Córdoba. No aplicamos recetas genéricas, sino estrategias adaptadas a la realidad de tu negocio y tu competencia local.',
+      points: [
+        'Auditoría de tu presencia digital actual en el mercado de Córdoba.',
+        'Estrategias de SEO Local para aparecer en búsquedas "cerca de mí" en la ciudad.',
+        'Campañas publicitarias segmentadas geográficamente con precisión.',
+        'Contenido que conecta con el tono y estilo del público local.',
+        'Reportes claros para que veas el retorno de tu inversión.',
+      ],
+    },
+    factors: {
+      h3: 'Claves para el éxito digital en Córdoba',
+      p: 'Para triunfar en el centro del país, necesitás una combinación de factores:',
+      points: [
+        'Visibilidad en Google Maps para búsquedas locales.',
+        'Redes sociales activas que generen comunidad.',
+        'Un sitio web rápido y adaptado a móviles.',
+        'Reputación online positiva (reseñas y testimonios).',
+        'Ofertas y promociones alineadas con el calendario local.',
+      ],
+    },
+    rank: {
+      h3: '¿Podés liderar tu rubro en Córdoba?',
+      points: [
+        { title: 'Análisis de Competencia', description: 'Vemos qué están haciendo los líderes de tu sector en Córdoba y buscamos cómo superarlos.' },
+        { title: 'Diferenciación', description: 'Encontramos tu ángulo único para que no seas "uno más" en el mercado.' },
+        { title: 'Constancia', description: 'El marketing no es magia, es trabajo constante. Te acompañamos en el día a día.' },
+        { title: 'Resultados Reales', description: 'Nos enfocamos en métricas de negocio: ventas, consultas y crecimiento.' },
+      ],
+    },
+    position: {
+      h3: 'Posicionate en el corazón del país',
+      p: 'Córdoba es tierra de oportunidades para quienes se animan a innovar. Llevá tu negocio al siguiente nivel con una estrategia digital sólida y profesional.',
+      button: 'Empezar ahora',
+    },
+    faqs: [
+      { question: '¿Tienen experiencia con empresas de Córdoba?', answer: 'Sí, trabajamos con clientes de diversos rubros en Córdoba, entendiendo las particularidades del mercado local.' },
+      { question: '¿Hacen reuniones presenciales en Córdoba?', answer: 'Trabajamos principalmente de forma remota para ser más ágiles y eficientes, pero estamos siempre conectados por videollamada y canales directos.' },
+      { question: '¿Cómo adaptan la estrategia al público cordobés?', answer: 'Analizamos las tendencias de búsqueda locales y el comportamiento del consumidor en la región para crear mensajes que resuenen.' },
+      { question: '¿Sirve el SEO para un negocio local en Córdoba?', answer: '¡Es fundamental! El SEO Local te permite aparecer cuando alguien busca tus servicios en Google Maps o en el buscador desde Córdoba.' },
+      { question: '¿Pueden manejar mis redes sociales?', answer: 'Claro que sí. Gestionamos tus perfiles en Instagram, Facebook, TikTok y LinkedIn con contenido relevante para tu audiencia.' },
+    ]
+  },
+  {
+    slug: 'buenos-aires',
+    title: 'Buenos Aires',
+    meta: {
+      title: 'Agencia de Marketing Digital en Buenos Aires | MANYA Digital',
+      description: 'Destacá en la ciudad de la furia. Agencia de marketing digital en Buenos Aires experta en SEO, SEM y Desarrollo Web para empresas que quieren liderar.',
+    },
+    hero: {
+      h1: 'Tu Agencia de Marketing Digital en Buenos Aires',
+      subservices: ['Estrategia Digital 360°', 'SEO y Posicionamiento', 'Publicidad en Redes', 'Desarrollo de E-commerce', 'Branding Digital'],
+    },
+    cta1: {
+      h2: '¿Querés competir en las grandes ligas?',
+      p: 'Buenos Aires es el mercado más competitivo del país. Para destacar entre tanto ruido, necesitás una estrategia digital impecable y agresiva. Nosotros te damos las herramientas para ganar.',
+      button: 'Quiero liderar en CABA',
+    },
+    why: {
+      h3: '¿Por qué el marketing digital es vital en Buenos Aires?',
+      points: [
+        { title: 'Competencia Feroz', description: 'En CABA y GBA, todos compiten por la atención. Solo los mejores destacan.' },
+        { title: 'Público Exigente', description: 'El consumidor porteño está hiperconectado y espera experiencias digitales de primera calidad.' },
+        { title: 'Oportunidades Masivas', description: 'Es el mercado con mayor volumen de búsquedas y transacciones online del país.' },
+        { title: 'Tendencias', description: 'Las tendencias nacen acá. Estar a la vanguardia es obligatorio para no quedar obsoleto.' },
+      ],
+    },
+    cta2: {
+      h2: 'Auditoría Digital en Buenos Aires Sin Cargo',
+      button: 'Solicitar auditoría',
+    },
+    howWeHelp: {
+      h3: 'Estrategias de alto impacto para Buenos Aires',
+      p: 'Diseñamos estrategias omnicanal que cubren todos los frentes. Desde Palermo hasta Puerto Madero, hacemos que tu marca sea omnipresente para tu público objetivo.',
+      points: [
+        'Investigación de mercado profunda para identificar nichos desatendidos.',
+        'Campañas de Performance Marketing enfocadas en ROI positivo.',
+        'SEO técnico avanzado para competir por las keywords más difíciles.',
+        'Diseño web de vanguardia que convierte visitas en clientes.',
+        'Automatización de marketing para gestionar grandes volúmenes de leads.',
+      ],
+    },
+    factors: {
+      h3: 'Factores de éxito en la capital',
+      p: 'En un mercado tan saturado, la excelencia es la norma. Nos enfocamos en:',
+      points: [
+        'Velocidad y experiencia de usuario (UX) impecable.',
+        'Creatividad que rompa el molde y llame la atención.',
+        'Segmentación hiper-específica por barrios e intereses.',
+        'Estrategia de contenidos que aporte valor real.',
+        'Análisis de datos en tiempo real para pivotar rápido.',
+      ],
+    },
+    rank: {
+      h3: '¿Es posible posicionarse primero en Buenos Aires?',
+      points: [
+        { title: 'Sí, con Estrategia', description: 'No es fácil, pero con la estrategia correcta y constancia, se puede superar a gigantes.' },
+        { title: 'Nicho vs. Masivo', description: 'A veces la clave es dominar un nicho específico antes de ir por todo el mercado.' },
+        { title: 'SEO Local', description: 'Ser el mejor en tu barrio es el primer paso para conquistar la ciudad.' },
+        { title: 'Inversión Inteligente', description: 'Optimizamos cada peso de tu presupuesto para que rinda al máximo en un mercado caro.' },
+      ],
+    },
+    position: {
+      h3: 'Conquistá el mercado más grande del país',
+      p: 'No dejes que tu competencia se lleve a tus clientes. Es hora de implementar una estrategia de marketing digital profesional y orientada a resultados en Buenos Aires.',
+      button: 'Empezar mi expansión',
+    },
+    faqs: [
+      { question: '¿Trabajan con empresas de CABA y GBA?', answer: 'Sí, la mayoría de nuestros clientes están en Buenos Aires. Conocemos el ritmo y la exigencia del mercado porteño.' },
+      { question: '¿Qué diferencia su servicio de otras agencias en BA?', answer: 'Nuestro enfoque en resultados y el uso de tecnología e IA para optimizar procesos. No vendemos humo, vendemos crecimiento.' },
+      { question: '¿Hacen desarrollo de software a medida?', answer: 'Nos especializamos en desarrollo web y e-commerce. Para software muy complejo, tenemos partners tecnológicos de confianza.' },
+      { question: '¿Cómo manejan la competencia alta en Google Ads?', answer: 'Con segmentación precisa, Quality Score alto y creatividad. Buscamos las oportunidades donde tu competencia no está mirando.' },
+      { question: '¿Ofrecen servicios para startups?', answer: 'Sí, nos encanta trabajar con startups. Entendemos las metodologías ágiles y la necesidad de crecimiento rápido (Growth Marketing).' },
+    ]
+  },
+  {
+    slug: 'neuquen',
+    title: 'Neuquén',
+    meta: {
+      title: 'Agencia de Marketing Digital en Neuquén | MANYA Digital',
+      description: 'Impulsá tu empresa en la capital de Vaca Muerta. Agencia de marketing digital en Neuquén especializada en servicios B2B, petróleo y comercio.',
+    },
+    hero: {
+      h1: 'Tu Agencia de Marketing Digital en Neuquén',
+      subservices: ['Marketing B2B', 'Diseño Web Corporativo', 'Posicionamiento en Google', 'Gestión de LinkedIn', 'Publicidad Digital'],
+    },
+    cta1: {
+      h2: '¿Tu negocio crece al ritmo de Neuquén?',
+      p: 'Neuquén es una de las plazas de mayor crecimiento en Argentina gracias a Vaca Muerta. Tu presencia digital debe estar a la altura de este desarrollo. Te ayudamos a captar las oportunidades de la región.',
+      button: 'Crecer en Neuquén',
+    },
+    why: {
+      h3: 'Marketing digital en la Patagonia',
+      points: [
+        { title: 'Crecimiento Económico', description: 'Aprovechá el impulso de la industria energética y el crecimiento demográfico de la zona.' },
+        { title: 'Enfoque B2B', description: 'Muchas oportunidades en Neuquén son B2B. Necesitás estrategias para llegar a tomadores de decisiones.' },
+        { title: 'Conectividad', description: 'El mundo digital rompe las barreras geográficas. Vendé tus servicios desde Neuquén al mundo.' },
+        { title: 'Profesionalismo', description: 'Las grandes empresas que operan en la zona exigen proveedores con imagen profesional y sólida.' },
+      ],
+    },
+    cta2: {
+      h2: 'Asesoría de Marketing en Neuquén',
+      button: 'Contactar ahora',
+    },
+    howWeHelp: {
+      h3: 'Soluciones digitales para el Alto Valle',
+      p: 'Entendemos la dinámica de Neuquén y el Alto Valle. Ofrecemos soluciones robustas para empresas que necesitan seriedad y resultados.',
+      points: [
+        'Estrategias de LinkedIn para captación de clientes corporativos (B2B).',
+        'Sitios web institucionales que transmiten confianza y solidez.',
+        'SEO local para destacar en Neuquén Capital y alrededores.',
+        'Campañas de Google Ads para captar la demanda de servicios industriales y comerciales.',
+        'Gestión de marca para posicionarte como líder en tu rubro.',
+      ],
+    },
+    factors: {
+      h3: 'Claves para destacar en el sur',
+      p: 'En un mercado en expansión, la calidad es lo que diferencia:',
+      points: [
+        'Presencia impecable en búsquedas relacionadas a tu industria.',
+        'Contenido técnico y de valor que demuestre tu expertise.',
+        'Testimonios y casos de éxito visibles.',
+        'Atención digital rápida y eficiente.',
+        'Adaptación a las necesidades de las grandes operadoras y pymes locales.',
+      ],
+    },
+    rank: {
+      h3: '¿Cómo ser referente en Neuquén?',
+      points: [
+        { title: 'Autoridad de Marca', description: 'Construimos tu reputación online para que seas la primera opción.' },
+        { title: 'Networking Digital', description: 'Usamos las redes para conectarte con actores clave de la región.' },
+        { title: 'Visibilidad Local', description: 'Aseguramos que quien busque tus servicios en la zona, te encuentre a vos.' },
+        { title: 'Calidad Premium', description: 'Elevamos el estándar de tu comunicación para competir al más alto nivel.' },
+      ],
+    },
+    position: {
+      h3: 'Potenciá tu presencia en Vaca Muerta',
+      p: 'Ya sea que brindes servicios a la industria petrolera, tengas un comercio o una pyme, el marketing digital es tu aliado para escalar en Neuquén.',
+      button: 'Impulsar mi negocio',
+    },
+    faqs: [
+      { question: '¿Entienden el mercado de Neuquén?', answer: 'Sí, conocemos la importancia de la industria energética y el crecimiento comercial de la región.' },
+      { question: '¿Hacen marketing para empresas B2B?', answer: 'Es una de nuestras especialidades. Utilizamos LinkedIn y estrategias de Account Based Marketing para llegar a otras empresas.' },
+      { question: '¿Pueden ayudarme a vender fuera de Neuquén?', answer: 'Absolutamente. El marketing digital te permite expandir tus fronteras y vender en todo el país o el exterior.' },
+      { question: '¿Qué servicios recomiendan para una pyme local?', answer: 'Generalmente recomendamos empezar con un buen sitio web, SEO local (Google Maps) y campañas en Google Ads para captar ventas rápidas.' },
+      { question: '¿Trabajan con el sector turismo en la Patagonia?', answer: 'Sí, tenemos experiencia posicionando destinos y servicios turísticos para atraer visitantes nacionales e internacionales.' },
+    ]
+  },
+  {
+    slug: 'rosario',
+    title: 'Rosario',
+    meta: {
+      title: 'Agencia de Marketing Digital en Rosario | MANYA Digital',
+      description: 'Hacé crecer tu marca en Rosario. Agencia de marketing digital experta en E-commerce, SEO y Redes Sociales para el mercado rosarino y la región.',
+    },
+    hero: {
+      h1: 'Tu Agencia de Marketing Digital en Rosario',
+      subservices: ['E-commerce Growth', 'Publicidad en Redes', 'SEO Estratégico', 'Diseño de Marcas', 'Email Marketing'],
+    },
+    cta1: {
+      h2: '¿Querés vender más en Rosario?',
+      p: 'Rosario es un polo comercial y agroindustrial gigante. Para captar la atención de los rosarinos y la región, necesitás una estrategia digital que combine creatividad con datos. Nosotros lo hacemos posible.',
+      button: 'Vender más en Rosario',
+    },
+    why: {
+      h3: 'Marketing digital desde el Monumento',
+      points: [
+        { title: 'Hub Comercial', description: 'Rosario es clave para el comercio y la logística. Tu e-commerce debe estar optimizado al 100%.' },
+        { title: 'Agroindustria', description: 'Si tu negocio está ligado al campo, sabemos cómo llegar al productor digital.' },
+        { title: 'Talento y Creatividad', description: 'La cuna de la bandera es también cuna de grandes ideas. Tu marca debe reflejar esa creatividad.' },
+        { title: 'Conexión Regional', description: 'Desde Rosario podés influir en todo el litoral y la zona centro del país.' },
+      ],
+    },
+    cta2: {
+      h2: 'Diagnóstico Digital para Empresas Rosarinas',
+      button: 'Pedir diagnóstico',
+    },
+    howWeHelp: {
+      h3: 'Estrategias que funcionan en Rosario',
+      p: 'Ayudamos a empresas rosarinas a digitalizarse y vender más. Ya sea que tengas un local en el centro o una industria en la periferia.',
+      points: [
+        'Desarrollo y optimización de tiendas online (E-commerce).',
+        'Campañas de Meta Ads para generar reconocimiento de marca y ventas.',
+        'Estrategias de contenido para redes sociales que generan engagement.',
+        'SEO para posicionar tu negocio en las búsquedas locales de Rosario.',
+        'Implementación de CRM para gestionar tus clientes de forma eficiente.',
+      ],
+    },
+    factors: {
+      h3: 'Lo que necesitás para triunfar',
+      p: 'En Rosario, la confianza y la cercanía son claves. En digital, eso se traduce en:',
+      points: [
+        'Comunicación auténtica y cercana en redes sociales.',
+        'Atención al cliente rápida por WhatsApp y chat.',
+        'Ofertas claras y competitivas.',
+        'Presencia omnicanal (estar donde está tu cliente).',
+        'Diseño visual atractivo que destaque tu marca.',
+      ],
+    },
+    rank: {
+      h3: '¿Cómo posicionarse en el mercado rosarino?',
+      points: [
+        { title: 'Entender al Usuario', description: 'Analizamos qué busca y cómo compra el consumidor de Rosario.' },
+        { title: 'Acciones Locales', description: 'Aprovechamos eventos y fechas locales para potenciar tus campañas.' },
+        { title: 'Optimización Móvil', description: 'La mayoría navega desde el celular. Tu web debe volar en móviles.' },
+        { title: 'Inversión en Pauta', description: 'Aceleramos tus resultados con publicidad paga inteligente.' },
+      ],
+    },
+    position: {
+      h3: 'Llevá tu empresa de Rosario al mundo',
+      p: 'El límite no es la Circunvalación. Con el marketing digital, tu negocio rosarino puede vender en cualquier lugar. Te ayudamos a abrir nuevos mercados.',
+      button: 'Expandir mi negocio',
+    },
+    faqs: [
+      { question: '¿Tienen clientes en Rosario?', answer: 'Sí, trabajamos con marcas de Rosario y Santa Fe, ayudándolas a potenciar su presencia digital.' },
+      { question: '¿Se especializan en algún rubro?', answer: 'Tenemos experiencia en e-commerce, servicios profesionales, industria y agro. Nos adaptamos a tu sector.' },
+      { question: '¿Cómo ayudan a un negocio físico en Rosario?', answer: 'Con estrategias "Drive to Store": usamos anuncios y SEO local para llevar gente desde el celular a la puerta de tu local.' },
+      { question: '¿Hacen diseño de marca (branding)?', answer: 'Sí, creamos identidades visuales fuertes y memorables, desde el logo hasta el manual de marca completo.' },
+      { question: '¿Qué resultados puedo esperar?', answer: 'Depende de tus objetivos, pero buscamos siempre aumentar tu visibilidad, tus consultas y, fundamentalmente, tus ventas.' },
+    ]
+  },
+  {
+    slug: 'mendoza',
+    title: 'Mendoza',
+    meta: {
+      title: 'Agencia de Marketing Digital en Mendoza | MANYA Digital',
+      description: 'Posicioná tu marca en la tierra del sol y el buen vino. Agencia de marketing digital en Mendoza experta en Turismo, Vinos y Servicios.',
+    },
+    hero: {
+      h1: 'Tu Agencia de Marketing Digital en Mendoza',
+      subservices: ['Marketing Turístico', 'E-commerce de Vinos', 'SEO Internacional', 'Redes Sociales', 'Diseño Web Multilingüe'],
+    },
+    cta1: {
+      h2: '¿Querés atraer más clientes en Mendoza?',
+      p: 'Mendoza es una vidriera al mundo. Ya sea que vendas vino, turismo o servicios locales, necesitás una estrategia digital que enamore a locales y turistas por igual. Brindamos por tu éxito digital.',
+      button: 'Crecer en Mendoza',
+    },
+    why: {
+      h3: 'Marketing digital al pie de los Andes',
+      points: [
+        { title: 'Turismo Receptivo', description: 'Atraé a turistas de Brasil, Chile, EE.UU. y Europa con estrategias segmentadas.' },
+        { title: 'Industria Vitivinícola', description: 'Sabemos cómo vender vino online y posicionar bodegas en el mercado digital.' },
+        { title: 'Comercio Local', description: 'Potenciamos los negocios del Gran Mendoza para que lideren su zona.' },
+        { title: 'Exportación de Servicios', description: 'Mendoza es un polo de talento. Te ayudamos a vender tus servicios al exterior.' },
+      ],
+    },
+    cta2: {
+      h2: 'Consultoría Digital en Mendoza',
+      button: 'Agendar consultoría',
+    },
+    howWeHelp: {
+      h3: 'Estrategias con sabor mendocino',
+      p: 'Entendemos que Mendoza tiene sus propios tiempos y oportunidades. Creamos planes a medida para bodegas, hoteles, agencias y pymes.',
+      points: [
+        'Campañas de Google Ads en múltiples idiomas para turistas.',
+        'SEO internacional para posicionar tu bodega o servicio.',
+        'Gestión de redes sociales con estética visual de alto impacto.',
+        'Desarrollo de tiendas online para venta de productos regionales.',
+        'Estrategias de email marketing para fidelizar clientes.',
+      ],
+    },
+    factors: {
+      h3: 'Claves para vender en Mendoza y al mundo',
+      p: 'La calidad visual y la experiencia de usuario son innegociables:',
+      points: [
+        'Fotografía y video de alta calidad (el paisaje vende).',
+        'Sitios web en varios idiomas (inglés, portugués).',
+        'Facilidad de reserva y compra online.',
+        'Presencia fuerte en TripAdvisor y Google Maps.',
+        'Narrativa de marca (storytelling) envolvente.',
+      ],
+    },
+    rank: {
+      h3: '¿Cómo destacar en la tierra del vino?',
+      points: [
+        { title: 'Storytelling', description: 'Contamos la historia detrás de tu marca para conectar emocionalmente.' },
+        { title: 'Segmentación', description: 'No le hablamos a todos igual. Diferenciamos al cliente local del turista internacional.' },
+        { title: 'Experiencia', description: 'Trasladamos la experiencia de tu servicio al mundo digital.' },
+        { title: 'Datos', description: 'Medimos todo para saber de dónde vienen tus mejores clientes.' },
+      ],
+    },
+    position: {
+      h3: 'Llevá Mendoza al mundo digital',
+      p: 'Tu negocio tiene un potencial enorme. No dejes que se quede solo en la provincia. Con nuestra ayuda, tu marca puede cruzar fronteras.',
+      button: 'Empezar ahora',
+    },
+    faqs: [
+      { question: '¿Tienen experiencia en turismo y bodegas?', answer: 'Sí, entendemos las dinámicas del marketing turístico y la venta de vinos online, dos pilares de Mendoza.' },
+      { question: '¿Pueden hacer campañas en otros idiomas?', answer: 'Absolutamente. Configuramos campañas en inglés, portugués y otros idiomas para captar al turista extranjero.' },
+      { question: '¿Trabajan con pymes de otros rubros en Mendoza?', answer: 'Sí, trabajamos con comercios, profesionales y empresas de servicios de todo el Gran Mendoza.' },
+      { question: '¿Cómo mejoran mi posicionamiento en Google?', answer: 'Con una estrategia de SEO integral que incluye optimización técnica, contenidos de calidad y link building.' },
+      { question: '¿Hacen sitios web con reservas online?', answer: 'Sí, desarrollamos sitios web con motores de reserva integrados para hoteles, excursiones y restaurantes.' },
     ]
   },
 ];

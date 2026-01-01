@@ -31,9 +31,9 @@ export function LocationsSection() {
                         className="space-y-12"
                     >
                         <div>
-                            <h2 className="font-headline font-bold text-4xl md:text-5xl">
+                            <h3 className="font-headline font-bold text-4xl md:text-5xl">
                                 En toda Argentina, cerca tuyo
-                            </h2>
+                            </h3>
                             <p className="mt-6 max-w-3xl text-muted-foreground md:text-lg">
                                 Con presencia en los puntos neurálgicos del país, combinamos el conocimiento local con una visión global para llevar tu marca al siguiente nivel.
                             </p>
@@ -45,7 +45,7 @@ export function LocationsSection() {
                                         <CardContent className="p-6 flex items-center justify-between">
                                             <div className="flex items-center gap-4">
                                                 <MapPin className="h-6 w-6 text-primary flex-shrink-0" />
-                                                <h3 className="font-semibold text-lg">{location.name}</h3>
+                                                <p className="font-semibold text-lg">{location.name}</p>
                                             </div>
                                             <MoveRight className="h-5 w-5 text-muted-foreground opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1" />
                                         </CardContent>

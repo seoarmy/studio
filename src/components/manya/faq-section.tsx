@@ -64,9 +64,9 @@ export function FaqSection() {
     <section id="faq" className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">
+          <h3 className="font-headline text-3xl font-bold md:text-4xl">
             Preguntas Frecuentes
-          </h2>
+          </h3>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
             Resolvemos algunas de las dudas más comunes que tienen nuestros
             clientes.
@@ -81,7 +81,7 @@ export function FaqSection() {
                 className="rounded-lg border bg-card px-4 transition-shadow duration-300 hover:shadow-md"
               >
                 <AccordionTrigger className="text-left font-semibold hover:no-underline text-base py-4">
-                  <h4>{faq.question}</h4>
+                  {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="pt-0 pb-4 text-muted-foreground">
                   <p>{faq.answer}</p>

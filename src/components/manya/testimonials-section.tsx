@@ -14,9 +14,9 @@ export function TestimonialsSection() {
     <section id="testimonios" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">
+          <h3 className="font-headline text-3xl font-bold md:text-4xl">
             Lo que Dicen Nuestros Clientes
-          </h2>
+          </h3>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
             La confianza y los resultados son nuestros pilares. Hablan ellos.
           </p>

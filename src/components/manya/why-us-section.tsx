@@ -24,14 +24,14 @@ const reasons = [
 ];
 
 export function WhyUsSection() {
-    const whyUsImage = PlaceHolderImages.find((p) => p.id === 'why-us-chart');
+  const whyUsImage = PlaceHolderImages.find((p) => p.id === 'why-us-chart');
 
   return (
     <section id="por-que-elegirnos" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -39,39 +39,39 @@ export function WhyUsSection() {
             className="space-y-12"
           >
             <div>
-                <h2 className="font-headline font-bold text-4xl md:text-5xl">
-                    ¿Por qué elegir nuestra Agencia de Marketing?
-                </h2>
-                <p className="mt-6 max-w-3xl text-muted-foreground md:text-lg">
-                    Porque no somos una agencia de marketing digital más. Somos tu socio estratégico en Argentina, combinando tecnología de punta, conocimiento local y un enfoque obsesivo en resultados tangibles para tu negocio.
-                </p>
+              <h3 className="font-headline font-bold text-4xl md:text-5xl">
+                ¿Por qué elegir Manya?
+              </h3>
+              <p className="mt-6 max-w-3xl text-muted-foreground md:text-lg">
+                Porque no somos una agencia de marketing digital más. Somos tu socio estratégico en Argentina, combinando tecnología de punta, conocimiento local y un enfoque obsesivo en resultados tangibles para tu negocio.
+              </p>
             </div>
             <ul className="space-y-8">
-                {reasons.map((reason, index) => {
-                    const Icon = reason.icon;
-                    return (
-                        <li key={index} className="flex gap-6 items-start">
-                             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary flex-shrink-0 mt-1">
-                                <Icon className="h-7 w-7" strokeWidth={2} />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold font-headline">{reason.title}</h3>
-                                <p className="mt-2 text-muted-foreground">{reason.description}</p>
-                            </div>
-                        </li>
-                    )
-                })}
+              {reasons.map((reason, index) => {
+                const Icon = reason.icon;
+                return (
+                  <li key={index} className="flex gap-6 items-start">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary flex-shrink-0 mt-1">
+                      <Icon className="h-7 w-7" strokeWidth={2} />
+                    </div>
+                    <div>
+                      <p className="text-xl font-bold font-headline">{reason.title}</p>
+                      <p className="mt-2 text-muted-foreground">{reason.description}</p>
+                    </div>
+                  </li>
+                )
+              })}
             </ul>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="overflow-hidden rounded-2xl shadow-xl transition-shadow duration-300 hover:shadow-2xl hover:shadow-primary/20"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
           >
-             {whyUsImage && (
+            {whyUsImage && (
               <Image
                 src={whyUsImage.imageUrl}
                 alt="Dashboard de resultados"

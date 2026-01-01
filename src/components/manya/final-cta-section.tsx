@@ -20,9 +20,9 @@ export function FinalCtaSection() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
         >
-          <h2 className="font-headline text-4xl font-bold md:text-5xl drop-shadow-md">
+          <h3 className="font-headline text-4xl font-bold md:text-5xl drop-shadow-md">
             ¿Listo para crecer?
-          </h2>
+          </h3>
           <p className="mx-auto mt-4 max-w-xl md:text-lg">
             Dejanos tu consulta y te damos 30 minutos sin cargo para analizar tu
             proyecto.

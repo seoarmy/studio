@@ -39,9 +39,9 @@ export function ClientsSection() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="mb-16 text-center"
         >
-          <h2 className="font-headline text-4xl font-bold md:text-5xl">
+          <h3 className="font-headline text-4xl font-bold md:text-5xl">
             Sectores que Impulsamos
-          </h2>
+          </h3>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
             Hablamos el idioma de tu industria. Tenemos experiencia probada en los sectores más dinámicos de Argentina.
           </p>
@@ -63,9 +63,9 @@ export function ClientsSection() {
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                     <Icon className="h-8 w-8" strokeWidth={2} />
                   </div>
-                  <h3 className="text-base font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
+                  <p className="text-base font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
                     {industry.name}
-                  </h3>
+                  </p>
                 </Card>
               </motion.div>
             );
