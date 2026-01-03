@@ -1,24 +1,24 @@
 'use client';
 import { motion } from 'framer-motion';
 
-const stats = [
-  { value: '150+', label: 'proyectos completados' },
-  { value: '5', label: 'provincias en Argentina' },
-  { value: '300%', label: 'ROI promedio' },
-  { value: '24/7', label: 'automatizaciones activas' },
-];
-
 const statVariant = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
-export function StatsSection() {
+export function StatsSection({ data }: { data?: any }) {
+  const stats = data?.statsList || [
+    { value: '150+', label: 'proyectos completados' },
+    { value: '5', label: 'provincias en Argentina' },
+    { value: '300%', label: 'ROI promedio' },
+    { value: '24/7', label: 'automatizaciones activas' },
+  ];
+
   return (
     <section className="py-24 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
-          {stats.map((stat, index) => (
+          {stats.map((stat: any, index: number) => (
             <motion.div
               key={stat.label}
               className="flex flex-col items-center justify-center"

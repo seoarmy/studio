@@ -4,7 +4,12 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
-export function FinalCtaSection() {
+export function FinalCtaSection({ data }: { data?: any }) {
+  const title = data?.finalCtaTitle || '¿Listo para crecer?';
+  const description = data?.finalCtaDescription || 'Dejanos tu consulta y te damos 30 minutos sin cargo para analizar tu proyecto.';
+  const buttonText = data?.finalCtaButtonText || 'Hablemos de tu proyecto';
+  const ctaLink = data?.finalCtaLink || '/contacto';
+
   return (
     <motion.section
       className="py-24 md:py-32 bg-primary"
@@ -21,11 +26,10 @@ export function FinalCtaSection() {
           transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
         >
           <h3 className="font-headline text-4xl font-bold md:text-5xl drop-shadow-md">
-            ¿Listo para crecer?
+            {title}
           </h3>
           <p className="mx-auto mt-4 max-w-xl md:text-lg">
-            Dejanos tu consulta y te damos 30 minutos sin cargo para analizar tu
-            proyecto.
+            {description}
           </p>
           <div className="mt-8 flex justify-center">
             <Button
@@ -34,7 +38,7 @@ export function FinalCtaSection() {
               variant="outline"
               className="bg-primary-foreground text-primary font-bold text-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-white/90 shadow-2xl rounded-full px-8 py-6"
             >
-              <Link href="/contacto">Hablemos de tu proyecto</Link>
+              <Link href={ctaLink}>{buttonText}</Link>
             </Button>
           </div>
         </motion.div>

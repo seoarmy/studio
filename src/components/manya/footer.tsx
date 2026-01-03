@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Instagram, Linkedin, Code } from 'lucide-react';
 
 export function Footer() {
@@ -7,11 +8,14 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12 md:px-6">
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4">
           <div className="flex flex-col items-start">
-            <Link href="/" className="mb-4 flex items-center gap-2" passHref>
-              <Code className="h-8 w-8 text-primary" strokeWidth={2} />
-              <span className="font-headline font-bold text-2xl">
-                MANYA Digital
-              </span>
+            <Link href="/" className="mb-4 flex items-center" passHref>
+              <Image
+                src="/logo.png"
+                alt="MANYA Digital"
+                width={360}
+                height={90}
+                className="h-20 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-muted-foreground">
               Innovación real desde Argentina para el mundo.

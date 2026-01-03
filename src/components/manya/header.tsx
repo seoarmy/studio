@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
@@ -35,12 +36,16 @@ export function Header() {
           : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2" passHref>
-          <Code className="h-8 w-8 text-primary" strokeWidth={2}/>
-          <span className="font-headline font-bold text-2xl text-foreground">
-            MANYA Digital
-          </span>
+      <div className="container mx-auto flex h-28 items-center justify-between px-4 md:px-6">
+        <Link href="/" className="flex items-center" passHref>
+          <Image
+            src="/logo.png"
+            alt="MANYA Digital"
+            width={400}
+            height={100}
+            className="h-16 md:h-24 w-auto object-contain"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex md:items-center md:gap-8">
@@ -56,54 +61,57 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-            <Button asChild className='hidden md:flex bg-primary text-primary-foreground transition-transform duration-300 ease-in-out hover:scale-105'>
-                <Link href="/contacto">Hablemos</Link>
-            </Button>
-            <div className="md:hidden">
-              <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    <Menu className="h-6 w-6" />
-                    <span className="sr-only">Abrir menú</span>
+          <Button asChild className='hidden md:flex bg-primary text-primary-foreground transition-transform duration-300 ease-in-out hover:scale-105'>
+            <Link href="/contacto">Hablemos</Link>
+          </Button>
+          <div className="md:hidden">
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Abrir menú</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-full max-w-sm bg-background p-0">
+                <SheetHeader className="p-6 pb-0">
+                  <SheetTitle>
+                    <Link
+                      href="/"
+                      className="flex items-center"
+                      onClick={closeMobileMenu}
+                    >
+                      <Image
+                        src="/logo.png"
+                        alt="MANYA Digital"
+                        width={300}
+                        height={75}
+                        className="h-16 w-auto object-contain"
+                      />
+                    </Link>
+                  </SheetTitle>
+                </SheetHeader>
+                <Separator className="my-4" />
+                <div className="flex h-full flex-col p-6 pt-0">
+                  <nav className="flex flex-col gap-4">
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        className="text-xl font-medium text-foreground transition-colors hover:text-primary py-2"
+                        onClick={closeMobileMenu}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </nav>
+                  <Separator className="my-6" />
+                  <Button asChild className='w-full' size="lg">
+                    <Link href="/contacto" onClick={closeMobileMenu}>Hablemos de tu proyecto</Link>
                   </Button>
-                </SheetTrigger>
-                <SheetContent side="right" className="w-full max-w-sm bg-background p-0">
-                  <SheetHeader className="p-6 pb-0">
-                     <SheetTitle>
-                        <Link
-                            href="/"
-                            className="flex items-center gap-2"
-                            onClick={closeMobileMenu}
-                        >
-                            <Code className="h-8 w-8 text-primary" strokeWidth={2}/>
-                            <span className="font-headline font-bold text-xl text-foreground">
-                            MANYA Digital
-                            </span>
-                        </Link>
-                     </SheetTitle>
-                  </SheetHeader>
-                  <Separator className="my-4" />
-                  <div className="flex h-full flex-col p-6 pt-0">
-                    <nav className="flex flex-col gap-4">
-                      {navLinks.map((link) => (
-                        <Link
-                          key={link.name}
-                          href={link.href}
-                          className="text-xl font-medium text-foreground transition-colors hover:text-primary py-2"
-                          onClick={closeMobileMenu}
-                        >
-                          {link.name}
-                        </Link>
-                      ))}
-                    </nav>
-                    <Separator className="my-6" />
-                    <Button asChild className='w-full' size="lg">
-                        <Link href="/contacto" onClick={closeMobileMenu}>Hablemos de tu proyecto</Link>
-                    </Button>
-                  </div>
-                </SheetContent>
-              </Sheet>
-            </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

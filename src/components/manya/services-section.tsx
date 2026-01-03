@@ -42,7 +42,10 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export function ServicesSection() {
+export function ServicesSection({ data }: { data?: any }) {
+  const title = data?.servicesTitle || 'Soluciones de nuestra Agencia de Marketing';
+  const description = data?.servicesDescription || 'Nuestra agencia de marketing digital no cree en soluciones universales. Vos traés el desafío, nosotros armamos el mix de herramientas que realmente funciona para tu negocio en Argentina.';
+
   return (
     <section id="servicios" className="py-24 md:py-32 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
@@ -55,11 +58,10 @@ export function ServicesSection() {
           className="mb-16 text-center"
         >
           <h2 className="font-headline text-4xl font-bold md:text-5xl">
-            Soluciones de nuestra Agencia de Marketing
+            {title}
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-muted-foreground md:text-lg">
-            Nuestra agencia de marketing digital no cree en soluciones universales. Vos traés el desafío,
-            nosotros armamos el mix de herramientas que realmente funciona para tu negocio en Argentina.
+            {description}
           </p>
         </motion.div>
 
@@ -94,7 +96,7 @@ export function ServicesSection() {
                             <CardTitle className="text-xl font-bold font-headline transition-colors duration-300 group-hover:text-primary">
                               {service.title}
                             </CardTitle>
-                             <CardDescription className="pt-4 text-base text-muted-foreground">
+                            <CardDescription className="pt-4 text-base text-muted-foreground">
                               {service.description}
                             </CardDescription>
                           </CardHeader>
@@ -109,21 +111,21 @@ export function ServicesSection() {
             <CarouselNext className="hidden sm:flex" />
           </Carousel>
         </motion.div>
-        
+
         <motion.div
-            className='mt-16 text-center'
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={cardVariants}
-            transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
+          className='mt-16 text-center'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={cardVariants}
+          transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
         >
-            <Button asChild size="lg" variant="outline" className="group rounded-full transition-all duration-300 ease-in-out hover:scale-105 hover:bg-primary hover:text-primary-foreground text-lg">
+          <Button asChild size="lg" variant="outline" className="group rounded-full transition-all duration-300 ease-in-out hover:scale-105 hover:bg-primary hover:text-primary-foreground text-lg">
             <Link href="/servicios">
-                Ver todos los servicios
-                <MoveRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              Ver todos los servicios
+              <MoveRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-            </Button>
+          </Button>
         </motion.div>
       </div>
     </section>

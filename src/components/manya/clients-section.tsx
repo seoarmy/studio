@@ -4,16 +4,16 @@ import { Building, GraduationCap, HeartPulse, Hotel, Laptop, LineChart, Mileston
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 
-const industries = [
-  { name: 'E-commerce', icon: ShoppingCart },
-  { name: 'Fintech', icon: LineChart },
-  { name: 'Real Estate', icon: Building },
-  { name: 'Wellness', icon: HeartPulse },
-  { name: 'Hotelería', icon: Hotel },
-  { name: 'Educación', icon: GraduationCap },
-  { name: 'Tecnología', icon: Laptop },
-  { name: 'Servicios Profesionales', icon: Milestone },
-];
+const iconMap: Record<string, any> = {
+  ShoppingCart,
+  LineChart,
+  Building,
+  HeartPulse,
+  Hotel,
+  GraduationCap,
+  Laptop,
+  Milestone,
+};
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -28,7 +28,20 @@ const cardVariants = {
   }),
 };
 
-export function ClientsSection() {
+export function ClientsSection({ data }: { data?: any }) {
+  const title = data?.clientsTitle || 'Sectores que Impulsamos';
+  const description = data?.clientsDescription || 'Hablamos el idioma de tu industria. Tenemos experiencia probada en los sectores más dinámicos de Argentina.';
+  const industries = data?.clientIndustries || [
+    { name: 'E-commerce', icon: 'ShoppingCart' },
+    { name: 'Fintech', icon: 'LineChart' },
+    { name: 'Real Estate', icon: 'Building' },
+    { name: 'Wellness', icon: 'HeartPulse' },
+    { name: 'Hotelería', icon: 'Hotel' },
+    { name: 'Educación', icon: 'GraduationCap' },
+    { name: 'Tecnología', icon: 'Laptop' },
+    { name: 'Servicios Profesionales', icon: 'Milestone' },
+  ];
+
   return (
     <section id="nuestros-clientes" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -40,16 +53,16 @@ export function ClientsSection() {
           className="mb-16 text-center"
         >
           <h3 className="font-headline text-4xl font-bold md:text-5xl">
-            Sectores que Impulsamos
+            {title}
           </h3>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
-            Hablamos el idioma de tu industria. Tenemos experiencia probada en los sectores más dinámicos de Argentina.
+            {description}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
-          {industries.map((industry, index) => {
-            const Icon = industry.icon;
+          {industries.map((industry: any, index: number) => {
+            const Icon = iconMap[industry.icon] || Building;
             return (
               <motion.div
                 key={industry.name}

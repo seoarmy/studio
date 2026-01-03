@@ -1,4 +1,7 @@
+export const dynamic = 'force-dynamic';
 
+import { client } from '@/lib/sanity';
+import { homeQuery } from '@/lib/queries';
 import { HeroSection } from '@/components/manya/hero-section';
 import { ServicesSection } from '@/components/manya/services-section';
 import { StatsSection } from '@/components/manya/stats-section';
@@ -11,7 +14,9 @@ import { FaqSection } from '@/components/manya/faq-section';
 import { LocationsSection } from '@/components/manya/locations-section';
 import { ClientsSection } from '@/components/manya/clients-section';
 
-export default function Home() {
+export default async function Home() {
+  const data = await client.fetch(homeQuery);
+
   const webSiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -29,17 +34,17 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
       />
-      <HeroSection />
-      <ServicesSection />
-      <WhyUsSection />
-      <ClientsSection />
-      <SuccessCasesSection />
-      <TestimonialsSection />
-      <StatsSection />
-      <LocationsSection />
+      <HeroSection data={data} />
+      <ServicesSection data={data} />
+      <WhyUsSection data={data} />
+      <ClientsSection data={data} />
+      <SuccessCasesSection data={data} />
+      <TestimonialsSection data={data} />
+      <StatsSection data={data} />
+      <LocationsSection data={data} />
       <BlogPreviewSection />
-      <FaqSection />
-      <FinalCtaSection />
+      <FaqSection data={data} />
+      <FinalCtaSection data={data} />
     </>
   );
 }

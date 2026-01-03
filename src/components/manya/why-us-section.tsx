@@ -1,30 +1,36 @@
 'use client';
 
-import { Bot, MapPin, BarChart3, CheckCircle2 } from 'lucide-react';
+import { Bot, MapPin, BarChart3 } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const reasons = [
-  {
-    icon: Bot,
-    title: 'IA al servicio del marketing',
-    description: 'No es moda, son resultados. Usamos IA para optimizar cada acción y potenciar tus estrategias.',
-  },
-  {
-    icon: MapPin,
-    title: 'Conocimiento local, alcance global',
-    description: 'Con equipos en 5 provincias, entendemos el mercado argentino. Innovación real desde acá para el mundo.',
-  },
-  {
-    icon: BarChart3,
-    title: 'Resultados medibles y transparentes',
-    description: 'Te damos acceso a un dashboard en tiempo real. Cuentas claras conservan la amistad (y los clientes).',
-  },
-];
+const iconMap: Record<string, any> = {
+  Bot: Bot,
+  MapPin: MapPin,
+  BarChart3: BarChart3,
+};
 
-export function WhyUsSection() {
-  const whyUsImage = PlaceHolderImages.find((p) => p.id === 'why-us-chart');
+export function WhyUsSection({ data }: { data?: any }) {
+  const title = data?.whyUsTitle || '¿Por qué elegir Manya?';
+  const description = data?.whyUsDescription || 'Porque no somos una agencia de marketing digital más. Somos tu socio estratégico en Argentina, combinando tecnología de punta, conocimiento local y un enfoque obsesivo en resultados tangibles para tu negocio.';
+  const reasons = data?.whyUsReasons || [
+    {
+      icon: 'Bot',
+      title: 'IA al servicio del marketing',
+      description: 'No es moda, son resultados. Usamos IA para optimizar cada acción y potenciar tus estrategias.',
+    },
+    {
+      icon: 'MapPin',
+      title: 'Conocimiento local, alcance global',
+      description: 'Con equipos en 5 provincias, entendemos el mercado argentino. Innovación real desde acá para el mundo.',
+    },
+    {
+      icon: 'BarChart3',
+      title: 'Resultados medibles y transparentes',
+      description: 'Te damos acceso a un dashboard en tiempo real. Cuentas claras conservan la amistad (y los clientes).',
+    },
+  ];
+  const image = data?.whyUsImage || 'https://images.unsplash.com/photo-1551288049-bbda38a5f85d?auto=format&fit=crop&q=80&w=1000';
 
   return (
     <section id="por-que-elegirnos" className="py-24 md:py-32 bg-background">
@@ -40,15 +46,15 @@ export function WhyUsSection() {
           >
             <div>
               <h3 className="font-headline font-bold text-4xl md:text-5xl">
-                ¿Por qué elegir Manya?
+                {title}
               </h3>
               <p className="mt-6 max-w-3xl text-muted-foreground md:text-lg">
-                Porque no somos una agencia de marketing digital más. Somos tu socio estratégico en Argentina, combinando tecnología de punta, conocimiento local y un enfoque obsesivo en resultados tangibles para tu negocio.
+                {description}
               </p>
             </div>
             <ul className="space-y-8">
-              {reasons.map((reason, index) => {
-                const Icon = reason.icon;
+              {reasons.map((reason: any, index: number) => {
+                const Icon = iconMap[reason.icon] || BarChart3;
                 return (
                   <li key={index} className="flex gap-6 items-start">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary flex-shrink-0 mt-1">
@@ -71,16 +77,13 @@ export function WhyUsSection() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
           >
-            {whyUsImage && (
-              <Image
-                src={whyUsImage.imageUrl}
-                alt="Dashboard de resultados"
-                width={600}
-                height={600}
-                className="w-full h-auto object-cover"
-                data-ai-hint={whyUsImage.imageHint}
-              />
-            )}
+            <Image
+              src={image}
+              alt="Dashboard de resultados"
+              width={600}
+              height={600}
+              className="w-full h-auto object-cover"
+            />
           </motion.div>
 
         </div>

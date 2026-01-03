@@ -7,18 +7,21 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { testimonials } from '@/lib/data';
 
-export function TestimonialsSection() {
+export function TestimonialsSection({ data }: { data?: any }) {
+  const title = data?.testimonialsTitle || 'Lo que Dicen Nuestros Clientes';
+  const description = data?.testimonialsDescription || 'La confianza y los resultados son nuestros pilares. Hablan ellos.';
+  const testimonials = data?.testimonialsList || [];
+
   return (
     <section id="testimonios" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
           <h3 className="font-headline text-3xl font-bold md:text-4xl">
-            Lo que Dicen Nuestros Clientes
+            {title}
           </h3>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
-            La confianza y los resultados son nuestros pilares. Hablan ellos.
+            {description}
           </p>
         </div>
         <Carousel
@@ -29,7 +32,7 @@ export function TestimonialsSection() {
           className="w-full max-w-4xl mx-auto"
         >
           <CarouselContent>
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial: any, index: number) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1 h-full">
                   <Card className="h-full flex flex-col transition-shadow duration-300 hover:shadow-lg bg-card border">
@@ -40,14 +43,13 @@ export function TestimonialsSection() {
                       <div className="flex items-center gap-4">
                         <Avatar>
                           <AvatarImage
-                            src={testimonial.avatar.src}
+                            src={testimonial.avatar}
                             alt={testimonial.name}
-                            data-ai-hint={testimonial.avatar.hint}
                           />
                           <AvatarFallback>
                             {testimonial.name
-                              .split(' ')
-                              .map((n) => n[0])
+                              ?.split(' ')
+                              .map((n: string) => n[0])
                               .join('')}
                           </AvatarFallback>
                         </Avatar>

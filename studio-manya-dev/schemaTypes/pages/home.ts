@@ -20,18 +20,18 @@ export const home = defineType({
     fields: [
         // --- HERO SECTION ---
         defineField({
-            name: 'heroHeading',
-            title: 'Heading',
-            type: 'string',
-            group: 'hero',
-            initialValue: 'No vendemos humo. Hacemos crecer tu negocio',
-        }),
-        defineField({
             name: 'heroSubheading',
-            title: 'Subheading',
+            title: 'Subheading (Pequeno Texto Superior)',
             type: 'string',
             group: 'hero',
             initialValue: 'Agencia de Marketing Digital en Argentina',
+        }),
+        defineField({
+            name: 'heroHeading',
+            title: 'Heading (Titulo Principal)',
+            type: 'string',
+            group: 'hero',
+            initialValue: 'No vendemos humo. Hacemos crecer tu negocio',
         }),
         defineField({
             name: 'heroDescription',
@@ -53,6 +53,31 @@ export const home = defineType({
             type: 'string',
             group: 'hero',
             initialValue: '/contacto',
+        }),
+        defineField({
+            name: 'heroImage',
+            title: 'Hero Image (Optional)',
+            type: 'image',
+            group: 'hero',
+            options: { hotspot: true },
+        }),
+        defineField({
+            name: 'heroFloatingIcons',
+            title: 'Floating Icons',
+            type: 'array',
+            group: 'hero',
+            of: [{
+                type: 'object',
+                fields: [
+                    { name: 'icon', type: 'string', title: 'Icon Name (Lucide)' },
+                    { name: 'color', type: 'string', title: 'Color Class (e.g. primary, accent)' },
+                ]
+            }],
+            initialValue: [
+                { icon: 'Bot', color: 'primary' },
+                { icon: 'Award', color: 'accent' },
+                { icon: 'Layers', color: 'secondary' },
+            ]
         }),
 
         // --- SERVICES SECTION ---
