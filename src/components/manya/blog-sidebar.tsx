@@ -36,7 +36,7 @@ export function BlogSidebar({
   categories = []
 }: {
   latestPosts?: SidebarPost[];
-  categories?: string[];
+  categories?: { title: string; slug: string }[];
 }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -188,9 +188,9 @@ export function BlogSidebar({
           <CardContent>
             <ul className="space-y-2">
               {categories.map(category => (
-                <li key={category}>
-                  <Link href={`/blog?categoria=${category}`} className="flex items-center justify-between text-muted-foreground hover:text-primary transition-colors group">
-                    <span>{category}</span>
+                <li key={category.slug}>
+                  <Link href={`/blog/categoria/${category.slug}`} className="flex items-center justify-between text-muted-foreground hover:text-primary transition-colors group">
+                    <span>{category.title}</span>
                     <ChevronRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 </li>

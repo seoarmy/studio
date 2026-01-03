@@ -49,7 +49,7 @@ async function getSidebarData() {
     publishedAt
   }`;
 
-  const categoriesQuery = `*[_type == "category"].title`;
+  const categoriesQuery = `*[_type == "category"] { title, "slug": slug.current }`;
 
   const [latestPosts, categories] = await Promise.all([
     client.fetch(latestPostsQuery),

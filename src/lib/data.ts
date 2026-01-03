@@ -422,7 +422,7 @@ export const serviceDetails = [
       description: 'Servicios de Community Manager y gestión de redes sociales. Creamos contenido, gestionamos comunidades y potenciamos tu marca en Instagram, Facebook, TikTok y más.',
     },
     hero: {
-      h1: 'Somos tu agencia de Redes Sociales en Argentina',
+      h1: 'Somos tu agencia de Redes Sociales en Argentina / Gestión de RRSS',
       subservices: ['Community Management', 'Estrategia de Contenido', 'Gestión de Pauta', 'Marketing de Influencers', 'Reportes de Métricas'],
     },
     cta1: {
@@ -656,7 +656,7 @@ export const serviceDetails = [
       description: 'Optimizá procesos y escalá tu negocio con nuestros servicios de automatización con IA. Expertos en Zapier, Make y desarrollo de workflows inteligentes.',
     },
     hero: {
-      h1: 'Tu agencia de Automatizaciones con IA en Argentina',
+      h1: 'Automatizá y Escalá tu Negocio en Argentina',
       subservices: ['Workflows Inteligentes', 'Integración de Apps (Zapier/Make)', 'Chatbots con IA', 'Automatización de Marketing', 'Optimización de Procesos'],
     },
     cta1: {

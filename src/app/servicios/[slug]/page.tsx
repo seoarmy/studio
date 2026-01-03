@@ -1,36 +1,42 @@
 
-import { services, serviceDetails } from '@/lib/data';
+export const dynamic = 'force-dynamic';
+
+import { client } from '@/lib/sanity';
+import { serviceQuery, serviceSlugsQuery } from '@/lib/queries';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ServicePageContent } from '@/components/manya/service-page-content';
 
 export async function generateStaticParams() {
-  return services.map((service) => ({
-    slug: service.slug,
+  const slugs = await client.fetch(serviceSlugsQuery);
+  return slugs.map((slug: string) => ({
+    slug,
   }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const service = serviceDetails.find((p) => p.slug === slug);
-  if (!service) {
+  const data = await client.fetch(serviceQuery, { slug });
+
+  if (!data) {
     return {
       title: 'Servicio no encontrado',
     }
   }
+
   return {
-    title: service.meta.title,
-    description: service.meta.description,
+    title: data.meta?.title || data.title,
+    description: data.meta?.description,
   }
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = serviceDetails.find((p) => p.slug === slug);
+  const data = await client.fetch(serviceQuery, { slug });
 
-  if (!service) {
+  if (!data) {
     notFound();
   }
 
-  return <ServicePageContent service={service} />;
+  return <ServicePageContent service={data as any} />;
 }

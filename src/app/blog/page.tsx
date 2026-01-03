@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { client, urlFor } from '@/lib/sanity';
 import type { Metadata } from 'next';
 import { format, parseISO } from 'date-fns';
@@ -33,7 +34,7 @@ async function getPosts() {
     publishedAt,
     excerpt,
     mainImage,
-    "categories": categories[]->title,
+    "categories": categories[]-> { title, "slug": slug.current },
     "author": author-> {
       name,
       "slug": slug.current
@@ -43,10 +44,19 @@ async function getPosts() {
   return await client.fetch(query, {}, { next: { revalidate: 0 } });
 }
 
+async function getCategories() {
+  const query = `*[_type == "category"] | order(title asc) {
+        title,
+        "slug": slug.current
+    }`;
+  return await client.fetch(query);
+}
+
 export default async function BlogPage() {
-  const blogPosts = await getPosts();
+  const [blogPosts, categories] = await Promise.all([getPosts(), getCategories()]);
 
   const blogSchema = {
+    // ... existing schema code
     '@context': 'https://schema.org',
     '@type': 'Blog',
     name: 'Blog de MANYA Digital',
@@ -90,48 +100,67 @@ export default async function BlogPage() {
       />
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="mb-12 text-center">
-          <h1 className="font-headline text-4xl font-bold md:text-5xl">
+          <h1 className="font-headline text-4xl font-bold md:text-5xl lg:text-6xl text-primary">
             Nuestro Rincón Digital
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-muted-foreground md:text-xl">
             Análisis, tendencias y consejos sobre el universo del marketing
             digital en Argentina.
           </p>
+
+          {/* Category Filter */}
+          <div className="mt-12 flex flex-wrap justify-center gap-3">
+            <Button asChild variant="default" className="rounded-full px-6">
+              <Link href="/blog">Todos</Link>
+            </Button>
+            {categories.map((cat: any) => (
+              <Button key={cat.slug} asChild variant="outline" className="rounded-full px-6 hover:bg-primary hover:text-primary-foreground transition-all">
+                <Link href={`/blog/categoria/${cat.slug}`}>{cat.title}</Link>
+              </Button>
+            ))}
+          </div>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post: any) => (
             <Card
               key={post.slug}
-              id={post.slug}
-              className="flex flex-col overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-xl border bg-card"
+              className="group flex flex-col overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1 border bg-card/50 backdrop-blur-sm"
             >
-              <Link href={`/blog/${post.slug}`} className="block group h-full flex flex-col">
-                <div className="relative h-56 w-full">
+              <div className="relative h-56 w-full overflow-hidden">
+                <Link href={`/blog/${post.slug}`} className="block h-full">
                   {post.mainImage && (
                     <Image
                       src={urlFor(post.mainImage).width(600).height(400).url()}
                       alt={post.title}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   )}
-                  {post.categories?.[0] && (
-                    <Badge className="absolute top-4 right-4" variant="default">{post.categories[0]}</Badge>
-                  )}
-                </div>
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl leading-tight group-hover:text-primary transition-colors">
+                </Link>
+                {post.categories?.[0] && (
+                  <Link href={`/blog/categoria/${post.categories[0].slug}`} className="absolute top-4 right-4 z-10">
+                    <Badge className="px-3 py-1 hover:bg-primary-foreground hover:text-primary transition-colors cursor-pointer" variant="default">
+                      {post.categories[0].title}
+                    </Badge>
+                  </Link>
+                )}
+              </div>
+              <Link href={`/blog/${post.slug}`} className="flex flex-col flex-grow">
+                <CardHeader className="space-y-1">
+                  <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
+                    {formatDate(post.publishedAt)}
+                  </div>
+                  <CardTitle className="font-headline text-2xl leading-tight group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
                   </CardTitle>
-                  <CardDescription>{formatDate(post.publishedAt)}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <p className="text-sm text-muted-foreground line-clamp-3">{post.excerpt}</p>
+                  <p className="text-muted-foreground line-clamp-3 leading-relaxed">{post.excerpt}</p>
                 </CardContent>
-                <div className="p-6 pt-0 mt-auto">
-                  <span className="font-semibold text-primary hover:underline">
-                    Leer más &rarr;
+                <div className="p-6 pt-0 mt-auto flex items-center justify-between border-t border-border/50 pt-4">
+                  <span className="font-bold text-primary flex items-center group-hover:translate-x-1 transition-transform">
+                    Leer más <span className="ml-2">→</span>
                   </span>
                 </div>
               </Link>
