@@ -24,9 +24,27 @@ export const metadata: Metadata = {
     siteName: 'MANYA Digital',
     locale: 'es_AR',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'MANYA Digital - Agencia de Marketing Digital',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Agencia de Marketing Digital en Argentina | MANYA Digital',
+    description: 'Potenciamos tu marca con estrategias de SEO, IA y marketing online a medida.',
+    images: ['/twitter-image.png'],
   },
   alternates: {
     canonical: './',
+  },
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
   },
 };
 
