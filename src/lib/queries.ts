@@ -1,5 +1,5 @@
 
-export const homeQuery = `*[_type == "home"][0]{
+export const homeQuery = `*[_type == "home"] | order(_updatedAt desc)[0]{
   ...,
   "whyUsImage": whyUsImage.asset->url,
   "successCasesList": successCasesList[]{

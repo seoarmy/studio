@@ -15,7 +15,7 @@ import { LocationsSection } from '@/components/manya/locations-section';
 import { ClientsSection } from '@/components/manya/clients-section';
 
 export default async function Home() {
-  const data = await client.fetch(homeQuery);
+  const data = await client.fetch(homeQuery, {}, { next: { revalidate: 0 } });
 
   const webSiteSchema = {
     '@context': 'https://schema.org',
