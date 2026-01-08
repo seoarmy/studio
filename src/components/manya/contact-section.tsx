@@ -252,7 +252,7 @@ export function ContactSection() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Servicio de interés</FormLabel>
-                              <Select onValueChange={field.onChange} defaultValue={field.value} value={field.value}>
+                              <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
                                   <SelectTrigger className="h-11 bg-background/50"><SelectValue placeholder="Seleccioná una opción" /></SelectTrigger>
                                 </FormControl>
@@ -273,7 +273,7 @@ export function ContactSection() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Presupuesto estimado</FormLabel>
-                              <Select onValueChange={field.onChange} defaultValue={field.value} value={field.value}>
+                              <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
                                   <SelectTrigger className="h-11 bg-background/50"><SelectValue placeholder="Rango de inversión" /></SelectTrigger>
                                 </FormControl>
@@ -295,7 +295,7 @@ export function ContactSection() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Ubicación</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value} value={field.value}>
+                            <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
                                 <SelectTrigger className="h-11 bg-background/50"><SelectValue placeholder="¿Dónde estás ubicado?" /></SelectTrigger>
                               </FormControl>
