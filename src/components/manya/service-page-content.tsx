@@ -88,6 +88,28 @@ export function ServicePageContent({ service }: { service: ServiceDetail }) {
         </div>
       </motion.section>
 
+      {/* CTA 1 */}
+      {service?.cta1?.h2 && (
+        <section className="py-20 md:py-24">
+          <div className="container text-center">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">{service.cta1.h2}</h2>
+            {service.cta1.p && (
+              <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+                {service.cta1.p}
+              </p>
+            )}
+            {service.cta1.button && (
+              <Button asChild size="lg" className="mt-8 group rounded-full px-8 text-lg">
+                <Link href="/contacto">
+                  {service.cta1.button}
+                  <MoveRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* Why Section */}
       <section className="py-20 md:py-24 bg-muted/20">
         <div className="container">
