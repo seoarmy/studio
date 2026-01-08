@@ -94,6 +94,12 @@ export const landingFields = [
                 title: 'Points (Bullets)',
                 of: [{ type: 'string' }]
             },
+            {
+                name: 'image',
+                type: 'image',
+                title: 'Section Image',
+                options: { hotspot: true }
+            },
         ]
     }),
 
@@ -111,6 +117,12 @@ export const landingFields = [
                 type: 'array',
                 title: 'Points (Bullets)',
                 of: [{ type: 'string' }]
+            },
+            {
+                name: 'image',
+                type: 'image',
+                title: 'Section Image',
+                options: { hotspot: true }
             },
         ]
     }),
@@ -148,6 +160,12 @@ export const landingFields = [
             { name: 'h3', type: 'string', title: 'H3 Title' },
             { name: 'p', type: 'text', title: 'Paragraph' },
             { name: 'button', type: 'string', title: 'Button Text' },
+            {
+                name: 'image',
+                type: 'image',
+                title: 'Section Image',
+                options: { hotspot: true }
+            },
         ]
     }),
 

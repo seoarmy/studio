@@ -20,7 +20,19 @@ export const cityQuery = `*[_type == "city" && slug.current == $slug][0]{
 export const citySlugsQuery = `*[_type == "city" && defined(slug.current)][].slug.current`;
 
 export const serviceQuery = `*[_type == "service" && slug.current == $slug][0]{
-  ...
+  ...,
+  howWeHelp {
+    ...,
+    "image": image.asset->url
+  },
+  factors {
+    ...,
+    "image": image.asset->url
+  },
+  position {
+    ...,
+    "image": image.asset->url
+  }
 }`;
 
 export const serviceSlugsQuery = `*[_type == "service" && defined(slug.current)][].slug.current`;

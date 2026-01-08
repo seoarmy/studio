@@ -10,10 +10,20 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import type { ServiceDetail } from '@/lib/data';
+import { type ServiceDetail, serviceDetails } from '@/lib/data';
 import { FaqSchema } from './faq-schema';
 
 export function ServicePageContent({ service }: { service: ServiceDetail }) {
+
+  // Merge Sanity data with local data to get the new images which are only defined locally for now.
+  // service.slug might be a string or an object with a 'current' property depending on the source/query.
+  const slugString = typeof service.slug === 'string' ? service.slug : service.slug?.current;
+  const localServiceData = serviceDetails.find(s => s.slug === slugString);
+  const visuals = localServiceData?.images || service.images || {
+    help: 'service-web',
+    factors: 'service-seo',
+    position: 'position-map'
+  };
 
   const renderHeroTitle = () => {
     if (!service?.hero?.h1 || !service?.title) {
@@ -163,7 +173,7 @@ export function ServicePageContent({ service }: { service: ServiceDetail }) {
               </ul>
             </div>
             <div>
-              <Image src={PlaceHolderImages.find(p => p.id === (service.images?.help || 'service-web'))?.imageUrl || ''} alt={service?.howWeHelp?.h3 || ''} width={600} height={400} className="rounded-2xl shadow-xl" data-ai-hint="digital strategy" />
+              <Image src={(service?.howWeHelp as any)?.image || PlaceHolderImages.find(p => p.id === visuals.help)?.imageUrl || ''} alt={service?.howWeHelp?.h3 || ''} width={600} height={400} className="rounded-2xl shadow-xl" data-ai-hint="digital strategy" />
             </div>
           </div>
         </div>
@@ -174,7 +184,7 @@ export function ServicePageContent({ service }: { service: ServiceDetail }) {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
-              <Image src={PlaceHolderImages.find(p => p.id === (service.images?.factors || 'service-seo'))?.imageUrl || ''} alt={service?.factors?.h3 || ''} width={600} height={400} className="rounded-2xl shadow-xl" data-ai-hint="analytics dashboard" />
+              <Image src={(service?.factors as any)?.image || PlaceHolderImages.find(p => p.id === visuals.factors)?.imageUrl || ''} alt={service?.factors?.h3 || ''} width={600} height={400} className="rounded-2xl shadow-xl" data-ai-hint="analytics dashboard" />
             </div>
             <div className="order-1 md:order-2">
               <h3 className="font-headline text-3xl md:text-4xl font-bold">{service?.factors?.h3}</h3>
@@ -233,7 +243,7 @@ export function ServicePageContent({ service }: { service: ServiceDetail }) {
               </Button>
             </div>
             <div>
-              <Image src={PlaceHolderImages.find(p => p.id === (service.images?.position || 'position-map'))?.imageUrl || ''} alt={service?.position?.h3 || ''} width={600} height={400} className="rounded-2xl" data-ai-hint="argentina map" />
+              <Image src={(service?.position as any)?.image || PlaceHolderImages.find(p => p.id === visuals.position)?.imageUrl || ''} alt={service?.position?.h3 || ''} width={600} height={400} className="rounded-2xl" data-ai-hint="argentina map" />
             </div>
           </div>
         </div>
