@@ -1,5 +1,6 @@
 
 import Script from 'next/script';
+import { useId } from 'react';
 
 interface Faq {
     question: string;
@@ -22,9 +23,11 @@ export function FaqSchema({ faqs }: { faqs: Faq[] }) {
         })),
     };
 
+    const id = useId();
+
     return (
         <Script
-            id={`faq-schema-${Math.random().toString(36).substr(2, 9)}`}
+            id={`faq-schema-${id}`}
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
