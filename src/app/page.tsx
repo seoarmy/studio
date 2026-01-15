@@ -3,6 +3,7 @@ export const dynamic = 'force-dynamic';
 import { client } from '@/lib/sanity';
 import { homeQuery } from '@/lib/queries';
 import { HeroSection } from '@/components/manya/hero-section';
+import { CustomSoftwareSection } from '@/components/manya/custom-software-section';
 import { ServicesSection } from '@/components/manya/services-section';
 import { StatsSection } from '@/components/manya/stats-section';
 import { WhyUsSection } from '@/components/manya/why-us-section';
@@ -35,6 +36,7 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
       />
       <HeroSection data={data} />
+      <CustomSoftwareSection data={data} />
       <ServicesSection data={data} />
       <WhyUsSection data={data} />
       <ClientsSection data={data} />

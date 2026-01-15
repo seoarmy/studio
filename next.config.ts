@@ -39,6 +39,14 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap',
+        destination: '/mapa-html',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

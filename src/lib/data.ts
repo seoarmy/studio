@@ -46,12 +46,6 @@ export const services = [
     description: 'Meta Ads y Google Ads optimizados con machine learning.',
   },
   {
-    icon: 'Users',
-    title: 'CRM',
-    slug: 'crm',
-    description: 'Gestión inteligente de clientes que maximiza el lifetime value.',
-  },
-  {
     icon: 'Component',
     title: 'Automatizaciones',
     slug: 'automatizaciones',
