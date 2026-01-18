@@ -493,4 +493,12 @@ export const homeFields = [
         group: 'seo',
         initialValue: 'Potenciá tu negocio con estrategias de SEO, Publicidad, Diseño Web y Automatizaciones. Consultoría gratuita.',
     }),
+    defineField({
+        name: 'seoImage',
+        title: 'SEO Image',
+        type: 'image',
+        group: 'seo',
+        options: { hotspot: true },
+    }),
 ]
+

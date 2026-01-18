@@ -1,5 +1,21 @@
 export const dynamic = 'force-dynamic';
 
+import { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const data = await client.fetch(homeQuery, {}, { next: { revalidate: 0 } });
+
+  return {
+    title: data.seoTitle,
+    description: data.seoDescription,
+    openGraph: {
+      title: data.seoTitle,
+      description: data.seoDescription,
+      images: data.seoImage ? [{ url: data.seoImage }] : undefined,
+    },
+  };
+}
+
 import { client } from '@/lib/sanity';
 import { homeQuery } from '@/lib/queries';
 import { HeroSection } from '@/components/manya/hero-section';

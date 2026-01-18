@@ -11,6 +11,7 @@ export const landingFields = [
         fields: [
             { name: 'title', type: 'string', title: 'Meta Title' },
             { name: 'description', type: 'text', title: 'Meta Description' },
+            { name: 'image', type: 'image', title: 'Meta Image', options: { hotspot: true } },
         ]
     }),
 

@@ -2,6 +2,7 @@
 export const homeQuery = `*[_type == "home"] | order(_updatedAt desc)[0]{
   ...,
   "whyUsImage": whyUsImage.asset->url,
+  "seoImage": seoImage.asset->url,
   "successCasesList": successCasesList[]{
     ...,
     "image": image.asset->url
@@ -14,13 +15,21 @@ export const homeQuery = `*[_type == "home"] | order(_updatedAt desc)[0]{
 }`;
 
 export const cityQuery = `*[_type == "city" && slug.current == $slug][0]{
-  ...
+  ...,
+  meta {
+    ...,
+    "image": image.asset->url
+  }
 }`;
 
 export const citySlugsQuery = `*[_type == "city" && defined(slug.current)][].slug.current`;
 
 export const serviceQuery = `*[_type == "service" && slug.current == $slug][0]{
   ...,
+  meta {
+    ...,
+    "image": image.asset->url
+  },
   howWeHelp {
     ...,
     "image": image.asset->url
